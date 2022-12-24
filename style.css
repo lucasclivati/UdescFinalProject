@@ -1,0 +1,86 @@
+.navbar{
+    background-image: url(files/logo/backgroundtexturepng.png);
+    padding: 0.1rem;
+    font-family: 'Fredoka One', cursive;
+}
+.navbar-brand{
+    padding: 0;
+}
+.footer p{
+    color:#251629;
+
+}
+.nav-link{
+    color:#251629;
+}
+
+body{
+    font-family: 'Fredoka', sans-serif;
+}
+mark{
+    background-color: #251629;
+    color:white;
+    font-size: 1.05rem;
+}
+.carousel-inner{
+    background-color: #251629;
+}
+h1{
+    color: #251629;
+}
+#terrorista{
+    height: 4.2rem;
+}
+.ptype {
+    position: relative;
+    height: 4.1rem;
+    width: 25rem;
+    color: #251629;
+    margin: auto;
+    font-size: 2.25rem;
+    display: flex;
+    text-align: center;
+    margin-top: 1rem;
+}
+span.cover {
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    display: block;
+    width: auto;
+    height: 100%;
+    background-color: #FFF;
+    animation: type 3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+span.cursor {
+    position: absolute;
+    left: 0;
+    display: inline;
+    color:  #251629;
+    animation: test 1s infinite;
+}
+@keyframes type {
+0% {
+    width: 17.5rem;
+}
+45% {
+    width: 7.8rem;
+}
+60% {
+    width: 7.8rem;
+}
+100% {
+    width: 0.625rem;
+}
+}
+@keyframes test {
+0% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+}
+}
+
