@@ -46,15 +46,18 @@
     </nav>
     <body>
         <div class="container my-1 px-2">
-            <div class="d-flex flex-wrap justify-content-center py-3 my-4">
-              <!-- esse método é pro terrorista aparecer direto no html via embed do lottieplayer, como tava muito lento, foi alterado pra puxar direto do json. <div><lottie-player src="https://assets5.lottiefiles.com/packages/lf20_smu40fjv.json"  background="transparent"  speed="1"  style="height: 80px;"  loop autoplay></lottie-player> -->
+            <div class="d-flex flex-wrap justify-content-center mt-4">
+              <!-- essa div debaixo puxaria automaticamente o terrorista girando via js (var animation), mas o inifinity não carregou arquivo json.
                 <div id="terrorista">
+                </div>-->
+                <div>
+                  <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_smu40fjv.json"  background="transparent"  speed="1"  style="height: 80px;"  loop autoplay></lottie-player>
                 </div>
-                <div><h1 class="display-3 fw-semibold border-bottom">Notícias</h1>
+                <div><h1 class="display-3 fw-semibold border-bottom">Notícias Atuais</h1>
                 </div>
             </div>
-            <p>Aqui devem aparecer todas as notícias via php.</p>
           </div>
+            <h2 class="text-center">Aqui devem aparecer todas as notícias via php.</h2>
         </body>
 
     <div class="container">
