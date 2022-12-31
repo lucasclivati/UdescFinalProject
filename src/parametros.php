@@ -8,6 +8,5 @@ $dadosPDO = [
 
 $db = new PDO($dadosPDO['dns'], $dadosPDO['usuario'], $dadosPDO['senha']);
 
-
+var_dump($db);
 ?>
-
