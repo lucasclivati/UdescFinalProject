@@ -8,16 +8,52 @@ $dadosPDO = [
 
 $db = new PDO($dadosPDO['dns'], $dadosPDO['usuario'], $dadosPDO['senha']);
 
-var_dump($db);
+var_dump($db); //linha para certificar que o db fez a conexão corretamente.
 
+//Daqui para baixo são dois exemplos de inserção manual de dados;
+/*
 $insertUser = "INSERT INTO users (useremail, userpassword, userfullname) VALUES ('financeiro@grupotrinita.com', '123456', 'lucastest')";
+$db->exec($insertUser);
+echo "Usuário inserido com sucesso!"
+
 $insertNoticias = "INSERT INTO noticias (useremail, nottitulo, notsubtitulo, notdatacriado, notdataeditado, notimagem) VALUES ('financeiro@grupotrinita.com', 'Titulo Noticia Teste', 'Subtitulo teste com mais caracteres', '2022/12/31', '','')";
-
-//$db->exec($insertUser);
-//echo "Usuário inserido com sucesso!"
-
 $db->exec($insertNoticias);
 echo "Notícia inserida com sucesso!"
+*/
 
+//Daqui para baixo são dois exemplos de select do banco de dados;
+/*
+$sqlselectUser = "select useremail, userpassword, userfullname from users";
+$users = $db->query($sqlselectUser)->fetchAll();
+var_dump($users);
 
+$sqlselectNoticias = "select useremail, nottitulo, notsubtitulo, notdatacriado, notdataeditado, notimagem from noticias";
+$noticias = $db->query($sqlselectNoticias)->fetchAll();
+//var_dump($noticias);
+foreach($noticias as $noticiaAtual) {
+    echo "<p>Título da notícia atual: {$noticiaAtual['nottitulo']}, criada por {$noticiaAtual['useremail']}</p>";
+};
+*/
+
+//Daqui para baixo é um exemplos de update manual de dados;
+/*
+if(isset($_GET['iduser']) && isset ($_GET['useremail'])) { 
+$sqlUpdateUser = "UPDATE users SET useremail = '{$_GET['useremail']}' where (iduser = '{$_GET['iduser']}')";
+  $db->exec($sqlUpdateUser);
+  echo "E-mail atualizado com sucesso!";
+} else {
+    echo "Não foram passados dados para update!";
+};
+*/
+
+//Daqui para baixo é um exemplo de delete manual;
+/*
+if(isset($_GET['iduser'])) { 
+    $sqlDeleteUser = "DELETE FROM users where (iduser = '{$_GET['iduser']}')";
+      $db->exec($sqlDeleteUser);
+      echo "Usuário deletado com sucesso!";
+    } else {
+        echo "Não foi deletado nenhum usuário!";
+    };
+*/
 ?>
