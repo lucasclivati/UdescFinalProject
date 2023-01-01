@@ -12,7 +12,7 @@ var_dump($db); //linha para certificar que o db fez a conexão corretamente.
 
 /*
 //Daqui para baixo são dois exemplos de inserção manual de dados;
-$insertUser = "INSERT INTO user (useremail, userpassword, userfullname) VALUES ('lucascli@hotmail.com', password('123456'), 'Testenome Sobrenome')";
+$insertUser = "INSERT INTO user (useremail, userpassword, userfullname) VALUES ('lucascli@hotmail.com', '123456', 'Testenome Sobrenome')";
 $db->exec($insertUser);
 echo "Usuário inserido com sucesso!"
 */
@@ -24,11 +24,22 @@ echo "Notícia inserida com sucesso!"
 */
 
 /*
-//Daqui para baixo são dois exemplos de select do banco de dados;
-$sqlselectUser = "select useremail, userpassword, userfullname from user";
+//Daqui para baixo são exemplos de select do banco de dados;
+$sqlselectUser = "select useremail, password(userpassword), userfullname from user";
 $user = $db->query($sqlselectUser)->fetchAll();
 var_dump($user);
 */
+
+/*
+$sqlselectUser = "SELECT 
+                useremail, userpassword, userfullname
+                FROM user
+                where useremail = 'lucascli@hotmail.com'
+                and userpassword = '123456'";
+$user = $db->query($sqlselectUser)->fetchAll();
+var_dump($user);
+*/
+
 /*
 $sqlselectNoticias = "select useremail, nottitulo, notsubtitulo, notdatacriado, notdataeditado, notimagem from noticias";
 $noticias = $db->query($sqlselectNoticias)->fetchAll();

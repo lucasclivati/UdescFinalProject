@@ -10,19 +10,44 @@ $dadosPDO = [
 
 $db = new PDO($dadosPDO['dns'], $dadosPDO['usuario'], $dadosPDO['senha']);
 
+//método sem criptografar e sem segurança, foi testado e deu ok//
 $sqlselectUser = "SELECT 
-                useremail, userpassword 
+                iduser, useremail, userpassword, userfullname, userimg
                 FROM user
-                where (useremail = :useremail) 
-                and (userpassword = PASSWORD(:userpassword))";
+                where useremail = '{$useremail}' 
+                and userpassword = '{$userpassword}'";
 
+$user = $db->query($sqlselectUser)->fetchAll();
+//var_dump($user);
+
+session_start();
+
+if ($user) {
+    $_SESSION['login'] = [
+        'iduser' => $user[0]['iduser'],
+        'userfullname' => $user[0]['userfullname'],
+        'userimg' => $user[0]['userimg']
+    ];
+    var_dump($_SESSION['login']);
+    header('Location:lancarnoticias.html');
+} else {
+    session_destroy();
+    header('Location:areaprivada.html');
+};
+
+//método usando bindParam não funcionou de jeito nenhum, deixei de fora, tentei trocando todas as aspas e tudo mais e não foi
+/*
+$sqlselectUser = "SELECT 
+                useremail, userpassword
+                FROM user
+                WHERE 
+                (useremail = :useremail)
+                AND (userpassword = :userpassword)";
 $consultalogin = $pdo->prepare($sqlselectUser);
 $consultalogin->bindParam(':useremail', $useremail);
 $consultalogin->bindParam(':userpassword', $userpassword);
 $consultalogin->execute();
-
 $resultadologin = $consultalogin->fetchAll();
-
 var_dump($resultadologin);
-
+*/
 ?>
