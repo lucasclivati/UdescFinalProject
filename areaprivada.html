@@ -80,7 +80,7 @@
             </div>
           </div>
         <main class="form-signin m-auto bg-light mb-5 border">
-          <form class="">
+          <form action="login.php" method="post">
                 <div class="d-flex justify-content-center btn-group" role="group" aria-label="Botoes Login" class="d-flex align-content-center">
                     <button class="col btn btn-dark" disabled type="submit">Área Privada</button>
                     <a class="col btn btn-outline-dark" type="submit" href="cadastro.html">Cadastrar-se</a>
@@ -89,11 +89,11 @@
                 Realize seu login para postar notícias quentinhas de CSGO.
             </p>
             <div class="form-floating">
-              <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+              <input type="email" class="form-control" name="useremail" id="floatingInput" placeholder="name@example.com">
               <label for="floatingInput">Endereço E-mail</label>
             </div>
             <div class="form-floating">
-              <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+              <input type="password" class="form-control" name="userpassword" id="floatingPassword" placeholder="Password">
               <label for="floatingPassword">Senha</label>
             </div>
             <div class="checkbox mb-3">
