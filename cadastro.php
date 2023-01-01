@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Notícias | CSGO NEWS - Seu portal de Notícias de Counter-Strike</title>
+        <title>Cadastro | CSGO NEWS - Seu portal de Notícias de Counter-Strike</title>
         <link rel="shortcut icon" href="files/logo/icon.png" type="image/x-icon">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,10 +21,37 @@
         <link rel="stylesheet" href="style.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.0/lottie.min.js"></script>
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <style>
+            .form-signin {
+            max-width: 330px;
+            padding: 15px;
+            }
+
+            .form-signin .form-floating:focus-within {
+            z-index: 2;
+            }
+
+            .form-signin input[type="name"] {
+            margin-bottom: -1px;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+            }
+
+            .form-signin input[type="email"] {
+            margin-bottom: -1px;
+            border-radius: 0;
+            }
+
+            .form-signin input[type="password"] {
+            margin-bottom: 10px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            }
+        </style>
     </head>
     <nav class="navbar navbar-expand-sm navbar-dark" id="menuprincipal">
         <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="index.php">
             <img src="files/logo/logo.png" alt="Logo CSGO News" height="90"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenulista">
             <span class="navbar-toggler-icon"></span>
@@ -32,13 +59,13 @@
         <div class="collapse navbar-collapse justify-content-sm-end m-1" id="navmenulista">
             <ul class="navbar-nav float-end my-2">
             <li class="nav-item">
-                <a class="nav-link" href="areaprivada.html"><button class="btn btn-outline-secondary" type="button">Área privada</button></a>
+                <a class="nav-link" href="areaprivada.php"><button class="btn btn-outline-secondary" type="button">Área privada</button></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="faleconosco.html"><button class="btn btn-outline-secondary" type="button">Fale conosco</button></a>
+                <a class="nav-link" href="faleconosco.php"><button class="btn btn-outline-secondary" type="button">Fale conosco</button></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="noticias.html"><button class="btn btn-outline-light" type="button">Notícias</button></a>
+                <a class="nav-link" href="noticias.php"><button class="btn btn-outline-light" type="button">Notícias</button></a>
             </li>
             </ul>
         </div>
@@ -53,24 +80,47 @@
                 <div>
                   <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_smu40fjv.json"  background="transparent"  speed="1"  style="height: 80px;"  loop autoplay></lottie-player>
                 </div>
-                <div><h1 class="display-3 fw-semibold border-bottom">Notícias Atuais</h1>
+                <div><h1 class="display-3 fw-semibold border-bottom">Cadastro</h1>
                 </div>
             </div>
           </div>
-            <h2 class="text-center">Aqui devem aparecer todas as notícias via php.</h2>
-        </body>
+            <main class="form-signin m-auto bg-light mb-5 border">
+                <form action="">
+                    <div class="d-flex justify-content-center btn-group" role="group" aria-label="Botoes Login" class="d-flex align-content-center">
+                        <a class="btn btn-outline-dark" type="submit" href="areaprivada.php">Área Privada</a>
+                        <button class="btn btn-dark" disabled type="submit">Cadastrar-se</button>
+                    </div>
+                    <p class="my-2">
+                        Cadastre-se para postar notícias novas de CSGO.
+                    </p>
+                    <div class="form-floating">
+                        <input type="name" class="form-control" id="floatingName" placeholder="Nome Sobrenome">
+                        <label for="floatingInput">Nome Completo</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com">
+                        <label for="floatingEmail">Endereço E-mail</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Senha</label>
+                    </div>
+                    <button class="w-100 btn btn-lg btn-dark" type="submit" id="cadastrarse">Cadastrar-se agora</button>
+                </form>
+            </main>
 
+        </body>
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-1 my-1 border-top">
         <div class="col justify-content-start">
             <ul class="nav">
-            <li class="nav-item"><a href="areaprivada.html" class="nav-link px-2">Área Privada</a></li>
-            <li class="nav-item"><a href="faleconosco.html" class="nav-link px-2">Fale Conosco</a></li>
-            <li class="nav-item"><a href="noticias.html" class="nav-link px-2">Notícias</a></li>
+            <li class="nav-item"><a href="areaprivada.php" class="nav-link px-2">Área Privada</a></li>
+            <li class="nav-item"><a href="faleconosco.php" class="nav-link px-2">Fale Conosco</a></li>
+            <li class="nav-item"><a href="noticias.php" class="nav-link px-2">Notícias</a></li>
             </ul>
         </div>
         <div class="col text-center">
-            <a href="index.html" class="col me-md-auto"><img src="files/logo/logo.png" alt="Logo CSGO News" height="90" ></a>
+            <a href="index.php" class="col me-md-auto"><img src="files/logo/logo.png" alt="Logo CSGO News" height="90" ></a>
         </div>
         <div class="col text-end">
             <a href="https://github.com/lucasclivati" class="text-decoration-none" style="color: #251629;"><p>&copy; 2022 Lucas Clivati</p></a>

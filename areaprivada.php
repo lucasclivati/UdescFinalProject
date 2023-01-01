@@ -46,7 +46,7 @@
     </head>
     <nav class="navbar navbar-expand-sm navbar-dark" id="menuprincipal">
         <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="index.php">
             <img src="files/logo/logo.png" alt="Logo CSGO News" height="90"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenulista">
             <span class="navbar-toggler-icon"></span>
@@ -54,13 +54,13 @@
         <div class="collapse navbar-collapse justify-content-sm-end m-1" id="navmenulista">
             <ul class="navbar-nav float-end my-2">
             <li class="nav-item">
-                <a class="nav-link" href="areaprivada.html"><button class="btn btn-outline-secondary" type="button">Área privada</button></a>
+                <a class="nav-link" href="areaprivada.php"><button class="btn btn-outline-secondary" type="button">Área privada</button></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="faleconosco.html"><button class="btn btn-outline-secondary" type="button">Fale conosco</button></a>
+                <a class="nav-link" href="faleconosco.php"><button class="btn btn-outline-secondary" type="button">Fale conosco</button></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="noticias.html"><button class="btn btn-outline-light" type="button">Notícias</button></a>
+                <a class="nav-link" href="noticias.php"><button class="btn btn-outline-light" type="button">Notícias</button></a>
             </li>
             </ul>
         </div>
@@ -83,7 +83,7 @@
           <form action="login.php" method="post">
                 <div class="d-flex justify-content-center btn-group" role="group" aria-label="Botoes Login" class="d-flex align-content-center">
                     <button class="col btn btn-dark" disabled type="submit">Área Privada</button>
-                    <a class="col btn btn-outline-dark" type="submit" href="cadastro.html">Cadastrar-se</a>
+                    <a class="col btn btn-outline-dark" type="submit" href="cadastro.php">Cadastrar-se</a>
                 </div>
             <p class="my-2">
                 Realize seu login para postar notícias quentinhas de CSGO.
@@ -101,22 +101,28 @@
                 <input type="checkbox" value="remember-me"> Lembrar-me
               </label>
             </div>
+            <?php if(isset($_GET['erro'])) { ?>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    Verifique os dados informados.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <?php } ?>
             <button class="w-100 btn btn-lg btn-dark" type="submit">Entrar</button>
           </form>
-          <p class="text-center mt-3">Sem cadastro? Crie um <a href="cadastro.html">agora</a>.</p>
+          <p class="text-center mt-3">Sem cadastro? Crie um <a href="cadastro.php">agora</a>.</p>
         </main>
         </body>
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-1 my-1 border-top">
         <div class="col justify-content-start">
             <ul class="nav">
-            <li class="nav-item"><a href="areaprivada.html" class="nav-link px-2">Área Privada</a></li>
-            <li class="nav-item"><a href="faleconosco.html" class="nav-link px-2">Fale Conosco</a></li>
-            <li class="nav-item"><a href="noticias.html" class="nav-link px-2">Notícias</a></li>
+            <li class="nav-item"><a href="areaprivada.php" class="nav-link px-2">Área Privada</a></li>
+            <li class="nav-item"><a href="faleconosco.php" class="nav-link px-2">Fale Conosco</a></li>
+            <li class="nav-item"><a href="noticias.php" class="nav-link px-2">Notícias</a></li>
             </ul>
         </div>
         <div class="col text-center">
-            <a href="index.html" class="col me-md-auto"><img src="files/logo/logo.png" alt="Logo CSGO News" height="90" ></a>
+            <a href="index.php" class="col me-md-auto"><img src="files/logo/logo.png" alt="Logo CSGO News" height="90" ></a>
         </div>
         <div class="col text-end">
             <a href="https://github.com/lucasclivati" class="text-decoration-none" style="color: #251629;"><p>&copy; 2022 Lucas Clivati</p></a>

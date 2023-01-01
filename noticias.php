@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Lançar Noticias | CSGO NEWS - Seu portal de Notícias de Counter-Strike</title>
+        <title>Notícias | CSGO NEWS - Seu portal de Notícias de Counter-Strike</title>
         <link rel="shortcut icon" href="files/logo/icon.png" type="image/x-icon">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +24,7 @@
     </head>
     <nav class="navbar navbar-expand-sm navbar-dark" id="menuprincipal">
         <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="index.php">
             <img src="files/logo/logo.png" alt="Logo CSGO News" height="90"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenulista">
             <span class="navbar-toggler-icon"></span>
@@ -32,20 +32,20 @@
         <div class="collapse navbar-collapse justify-content-sm-end m-1" id="navmenulista">
             <ul class="navbar-nav float-end my-2">
             <li class="nav-item">
-                <a class="nav-link" href="areaprivada.html"><button class="btn btn-outline-secondary" type="button">Área privada</button></a>
+                <a class="nav-link" href="areaprivada.php"><button class="btn btn-outline-secondary" type="button">Área privada</button></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="faleconosco.html"><button class="btn btn-outline-secondary" type="button">Fale conosco</button></a>
+                <a class="nav-link" href="faleconosco.php"><button class="btn btn-outline-secondary" type="button">Fale conosco</button></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="noticias.html"><button class="btn btn-outline-light" type="button">Notícias</button></a>
+                <a class="nav-link" href="noticias.php"><button class="btn btn-outline-light" type="button">Notícias</button></a>
             </li>
             </ul>
         </div>
         </div>
     </nav>
     <body>
-        <div class="container">
+        <div class="container my-1 px-2">
             <div class="d-flex flex-wrap justify-content-center mt-4">
               <!-- essa div debaixo puxaria automaticamente o terrorista girando via js (var animation), mas o inifinity não carregou arquivo json.
                 <div id="terrorista">
@@ -53,25 +53,24 @@
                 <div>
                   <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_smu40fjv.json"  background="transparent"  speed="1"  style="height: 80px;"  loop autoplay></lottie-player>
                 </div>
-                <div><h1 class="display-3 fw-semibold border-bottom">Administrador</h1>
+                <div><h1 class="display-3 fw-semibold border-bottom">Notícias Atuais</h1>
                 </div>
             </div>
           </div>
-          <h2 class="container my-1 px-2 d-flex flex-wrap justify-content-center">Esta é sua área privada. Gerencie notícias aqui.</h2>
-          <p class="container my-1 px-2">Texto.</p>
+            <h2 class="text-center">Aqui devem aparecer todas as notícias via php.</h2>
         </body>
 
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-1 my-1 border-top">
         <div class="col justify-content-start">
             <ul class="nav">
-            <li class="nav-item"><a href="areaprivada.html" class="nav-link px-2">Área Privada</a></li>
-            <li class="nav-item"><a href="faleconosco.html" class="nav-link px-2">Fale Conosco</a></li>
-            <li class="nav-item"><a href="noticias.html" class="nav-link px-2">Notícias</a></li>
+            <li class="nav-item"><a href="areaprivada.php" class="nav-link px-2">Área Privada</a></li>
+            <li class="nav-item"><a href="faleconosco.php" class="nav-link px-2">Fale Conosco</a></li>
+            <li class="nav-item"><a href="noticias.php" class="nav-link px-2">Notícias</a></li>
             </ul>
         </div>
         <div class="col text-center">
-            <a href="index.html" class="col me-md-auto"><img src="files/logo/logo.png" alt="Logo CSGO News" height="90" ></a>
+            <a href="index.php" class="col me-md-auto"><img src="files/logo/logo.png" alt="Logo CSGO News" height="90" ></a>
         </div>
         <div class="col text-end">
             <a href="https://github.com/lucasclivati" class="text-decoration-none" style="color: #251629;"><p>&copy; 2022 Lucas Clivati</p></a>
