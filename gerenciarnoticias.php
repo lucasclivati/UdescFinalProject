@@ -45,31 +45,34 @@
         </div>
     </nav>
     <body>
-        <div class="d-flex flex-row flex-shrink-0 p-3 bg-light justify-content-end align-items-center" style="height: 5rem;">
-            <div class="d-flex justify-content-center btn-group" role="group" aria-label="Botoes Login" class="d-flex align-content-center">
-                    <button class="col btn btn-dark" disabled type="submit"><i class="bi bi-newspaper"></i>  Gerenciar</button>
-                    <a class="col btn btn-outline-dark" type="submit" href="adicionarnoticias.php"><i class="bi bi-file-earmark-plus-fill"></i>  Adicionar</a>
+        <div class="d-flex flex-row justify-content-between align-items-center py-1 px-1 bg-light">
+            <div class="col justify-content-start">
+                <h3>Gerenciar</h3>
             </div>
-            <div class="d-flex mx-3">
-                <div class="vr"></div>
-            </div>
-            <div class="dropdown p-3 align-items-center">
-                <a href="#" class="d-flex link-dark align-items-center text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
-                    <strong>mdo</strong>
-                </a>
-                <ul class="dropdown-menu text-small shadow">
-                    <li><a class="dropdown-item" href="#">Editar perfil</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Logout</a></li>
-                </ul>
+            <div class="col d-flex justify-content-end align-items-center" style="height: 4.5em;">
+                <div class="justify-content-center btn-group" role="group" aria-label="Botoes Login">
+                        <button class="col btn btn-dark btn-sm" disabled type="submit"><i class="bi bi-newspaper"></i>  Gerenciar</button>
+                        <a class="col btn btn-outline-dark btn-sm" type="submit" href="adicionarnoticias.php"><i class="bi bi-file-earmark-plus-fill"></i>  Adicionar</a>
+                </div>
+                <div class="mx-2 d-flex" style="height: 2rem;">
+                    <div class="vr"></div>
+                </div>
+                <div class="dropdown align-items-center mr-3">
+                    <a href="#" class="link-dark align-items-center text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                        <strong>mdo</strong>
+                    </a>
+                    <ul class="dropdown-menu text-small shadow">
+                        <li><a class="dropdown-item" href="#">Editar perfil</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="container">
-                <h3>Gerenciamento de Notícias</h3>
-                <p>Aqui vai uma tabela com todas as noticias.</p>
-            </div>
-        
+        <div>
+            <p>Aqui vai uma tabela com todas as noticias.</p>
+        </div>
     </body>
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-1 my-1 border-top">

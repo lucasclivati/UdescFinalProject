@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Adicionar Notícias | CSGO NEWS - Seu portal de Notícias de Counter-Strike</title>
+        <title>Gerenciar Noticias | CSGO NEWS - Seu portal de Notícias de Counter-Strike</title>
         <link rel="shortcut icon" href="files/logo/icon.png" type="image/x-icon">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,30 +45,34 @@
         </div>
     </nav>
     <body>
-    <div class="d-flex flex-row flex-shrink-0 p-3 bg-light justify-content-end align-items-center" style="height: 5rem;">
-            <div class="d-flex justify-content-center btn-group" role="group" aria-label="Botoes Login" class="d-flex align-content-center">
-                    <a class="col btn btn-outline-dark" type="submit" href="gerenciarnoticias.php"><i class="bi bi-file-earmark-plus-fill"></i>  Gerenciar</a>
-                    <button class="col btn btn-dark" disabled type="submit"><i class="bi bi-newspaper"></i>  Adicionar</button>
+        <div class="d-flex flex-row justify-content-between align-items-center py-1 px-1 bg-light">
+        <div class="col justify-content-start">
+                <h3>Adicionar</h3>
             </div>
-            <div class="d-flex mx-3">
-                <div class="vr"></div>
-            </div>
-            <div class="dropdown p-3 align-items-center">
-                <a href="#" class="d-flex link-dark align-items-center text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
-                    <strong>mdo</strong>
-                </a>
-                <ul class="dropdown-menu text-small shadow">
-                    <li><a class="dropdown-item" href="#">Editar perfil</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Logout</a></li>
-                </ul>
+            <div class="col d-flex justify-content-end align-items-center" style="height: 4.5em;">
+                <div class="d-flex justify-content-center btn-group" role="group" aria-label="Botoes Login" class="d-flex align-content-center">
+                        <a class="col btn btn-outline-dark btn-sm" type="submit" href="gerenciarnoticias.php"><i class="bi bi-file-earmark-plus-fill"></i>  Gerenciar</a>
+                        <button class="col btn btn-dark btn-sm" disabled type="submit"><i class="bi bi-newspaper"></i>  Adicionar</button>
+                </div>
+                <div class="mx-2 d-flex" style="height: 2rem;">
+                    <div class="vr"></div>
+                </div>
+                <div class="dropdown align-items-center">
+                    <a href="#" class="link-dark align-items-center text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                        <strong>mdo</strong>
+                    </a>
+                    <ul class="dropdown-menu text-small shadow">
+                        <li><a class="dropdown-item" href="#">Editar perfil</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="container">
-                <h3>Adicionar Notícias</h3>
-                <p>Aqui vai um form para adicionar notícias.</p>
-            </div>
+        <div>
+            <p>Aqui vai um formulário pra adicionar notícias.</p>
+        </div>
     </body>
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-1 my-1 border-top">
