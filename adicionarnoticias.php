@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Lançar Noticias | CSGO NEWS - Seu portal de Notícias de Counter-Strike</title>
+        <title> Adicionar Notícias | CSGO NEWS - Seu portal de Notícias de Counter-Strike</title>
         <link rel="shortcut icon" href="files/logo/icon.png" type="image/x-icon">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,22 +45,31 @@
         </div>
     </nav>
     <body>
-        <div class="container">
-            <div class="d-flex flex-wrap justify-content-center mt-4">
-              <!-- essa div debaixo puxaria automaticamente o terrorista girando via js (var animation), mas o inifinity não carregou arquivo json.
-                <div id="terrorista">
-                </div>-->
-                <div>
-                  <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_smu40fjv.json"  background="transparent"  speed="1"  style="height: 80px;"  loop autoplay></lottie-player>
-                </div>
-                <div><h1 class="display-3 fw-semibold border-bottom">Administrador</h1>
-                </div>
+    <div class="d-flex flex-row flex-shrink-0 p-3 bg-light justify-content-end align-items-center" style="height: 5rem;">
+            <div class="d-flex justify-content-center btn-group" role="group" aria-label="Botoes Login" class="d-flex align-content-center">
+                    <button class="col btn btn-outline-dark" type="submit" href="gerenciarnoticias.php"><i class="bi bi-newspaper"></i>  Gerenciar</button>
+                    <a class="col btn btn-dark" type="submit" disabled type="submit"><i class="bi bi-file-earmark-plus-fill"></i>  Adicionar</a>
             </div>
-          </div>
-          <h2 class="container my-1 px-2 d-flex flex-wrap justify-content-center">Esta é sua área privada. Gerencie notícias aqui.</h2>
-          <p class="container my-1 px-2">Texto.</p>
-        </body>
-
+            <div class="d-flex mx-3">
+                <div class="vr"></div>
+            </div>
+            <div class="dropdown p-3 align-items-center">
+                <a href="#" class="d-flex link-dark align-items-center text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                    <strong>mdo</strong>
+                </a>
+                <ul class="dropdown-menu text-small shadow">
+                    <li><a class="dropdown-item" href="#">Editar perfil</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+                <h3>Gerenciamento de Notícias</h3>
+                <p>Aqui vai um form para adicionar notícias.</p>
+            </div>
+    </body>
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-1 my-1 border-top">
         <div class="col justify-content-start">
@@ -77,8 +86,7 @@
             <a href="https://github.com/lucasclivati" class="text-decoration-none" style="color: #251629;"><p>&copy; 2022 Lucas Clivati</p></a>
         </div>
         </footer>
-    </div>
-        
+    </div>      
 </html>
 <script>
 var animation = bodymovin.loadAnimation({

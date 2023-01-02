@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Área Privada | CSGO NEWS - Seu portal de Notícias de Counter-Strike</title>
+        <title>Gerenciar Noticias | CSGO NEWS - Seu portal de Notícias de Counter-Strike</title>
         <link rel="shortcut icon" href="files/logo/icon.png" type="image/x-icon">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,28 +21,6 @@
         <link rel="stylesheet" href="style.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.0/lottie.min.js"></script>
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-        <style>
-           .form-signin {
-            max-width: 330px;
-            padding: 15px;
-            }
-
-            .form-signin .form-floating:focus-within {
-            z-index: 2;
-            }
-            
-            .form-signin input[type="email"] {
-            margin-bottom: -1px;
-            border-bottom-right-radius: 0;
-            border-bottom-left-radius: 0;
-            }
-
-            .form-signin input[type="password"] {
-            margin-bottom: 10px;
-            border-top-left-radius: 0;
-            border-top-right-radius: 0;
-            }
-        </style>
     </head>
     <nav class="navbar navbar-expand-sm navbar-dark" id="menuprincipal">
         <div class="container-fluid">
@@ -67,51 +45,32 @@
         </div>
     </nav>
     <body>
-        <div class="container my-1 px-2">
-            <div class="d-flex flex-wrap justify-content-center mt-4">
-              <!-- essa div debaixo puxaria automaticamente o terrorista girando via js (var animation), mas o inifinity não carregou arquivo json.
-                <div id="terrorista">
-                </div>-->
-                <div>
-                  <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_smu40fjv.json"  background="transparent"  speed="1"  style="height: 80px;"  loop autoplay></lottie-player>
-                </div>
-                <div><h1 class="display-3 fw-semibold border-bottom">Área Privada</h1>
-                </div>
+        <div class="d-flex flex-row flex-shrink-0 p-3 bg-light justify-content-end align-items-center" style="height: 5rem;">
+            <div class="d-flex justify-content-center btn-group" role="group" aria-label="Botoes Login" class="d-flex align-content-center">
+                    <button class="col btn btn-dark" disabled type="submit"><i class="bi bi-newspaper"></i>  Gerenciar</button>
+                    <a class="col btn btn-outline-dark" type="submit" href="adicionarnoticias.php"><i class="bi bi-file-earmark-plus-fill"></i>  Adicionar</a>
             </div>
-          </div>
-        <main class="form-signin m-auto bg-light mb-5 border">
-          <form action="login.php" method="post">
-                <div class="d-flex justify-content-center btn-group" role="group" aria-label="Botoes Login" class="d-flex align-content-center">
-                    <button class="col btn btn-dark" disabled type="submit">Área Privada</button>
-                    <a class="col btn btn-outline-dark" type="submit" href="cadastro.php">Cadastrar-se</a>
-                </div>
-            <p class="my-2 text-align-center">
-                Realize seu login para postar notícias quentinhas de CSGO.
-            </p>
-            <div class="form-floating">
-              <input type="email" class="form-control" name="useremail" id="floatingInput" placeholder="name@example.com">
-              <label for="floatingInput">Endereço E-mail</label>
+            <div class="d-flex mx-3">
+                <div class="vr"></div>
             </div>
-            <div class="form-floating">
-              <input type="password" class="form-control" name="userpassword" id="floatingPassword" placeholder="Password">
-              <label for="floatingPassword">Senha</label>
+            <div class="dropdown p-3 align-items-center">
+                <a href="#" class="d-flex link-dark align-items-center text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                    <strong>mdo</strong>
+                </a>
+                <ul class="dropdown-menu text-small shadow">
+                    <li><a class="dropdown-item" href="#">Editar perfil</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                </ul>
             </div>
-            <div class="checkbox mb-3">
-              <label>
-                <input type="checkbox" value="remember-me"> Lembrar-me
-              </label>
+        </div>
+        <div class="container">
+                <h3>Gerenciamento de Notícias</h3>
+                <p>Aqui vai uma tabela com todas as noticias.</p>
             </div>
-            <?php if(isset($_GET['erro'])) { ?>
-                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    Verifique os dados informados.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-            <?php } ?>
-            <button class="w-100 btn btn-lg btn-dark" type="submit">Entrar</button>
-          </form>
-          <p class="text-center mt-3">Sem cadastro? Crie um <a href="cadastro.php">agora</a>.</p>
-        </main>
-        </body>
+        
+    </body>
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-1 my-1 border-top">
         <div class="col justify-content-start">
@@ -128,8 +87,7 @@
             <a href="https://github.com/lucasclivati" class="text-decoration-none" style="color: #251629;"><p>&copy; 2022 Lucas Clivati</p></a>
         </div>
         </footer>
-    </div>
-        
+    </div>      
 </html>
 <script>
 var animation = bodymovin.loadAnimation({

@@ -29,7 +29,7 @@ if ($user) {
         'userimg' => $user[0]['userimg']
     ];
     var_dump($_SESSION['login']);
-    header('Location:lancarnoticias.php');
+    header('Location:gerenciarnoticias.php');
 } else {
     session_destroy();
     header('Location:areaprivada.php?erro=1');
