@@ -47,8 +47,8 @@
     <body>
     <div class="d-flex flex-row flex-shrink-0 p-3 bg-light justify-content-end align-items-center" style="height: 5rem;">
             <div class="d-flex justify-content-center btn-group" role="group" aria-label="Botoes Login" class="d-flex align-content-center">
-                    <button class="col btn btn-outline-dark" type="submit" href="gerenciarnoticias.php"><i class="bi bi-newspaper"></i>  Gerenciar</button>
-                    <a class="col btn btn-dark" type="submit" disabled type="submit"><i class="bi bi-file-earmark-plus-fill"></i>  Adicionar</a>
+                    <a class="col btn btn-outline-dark" type="submit" href="gerenciarnoticias.php"><i class="bi bi-file-earmark-plus-fill"></i>  Gerenciar</a>
+                    <button class="col btn btn-dark" disabled type="submit"><i class="bi bi-newspaper"></i>  Adicionar</button>
             </div>
             <div class="d-flex mx-3">
                 <div class="vr"></div>
@@ -66,7 +66,7 @@
             </div>
         </div>
         <div class="container">
-                <h3>Gerenciamento de Notícias</h3>
+                <h3>Adicionar Notícias</h3>
                 <p>Aqui vai um form para adicionar notícias.</p>
             </div>
     </body>
