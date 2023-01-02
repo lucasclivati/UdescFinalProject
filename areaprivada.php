@@ -1,3 +1,9 @@
+<?php
+session_start();
+if($_SESSION['login']){
+    header('Location:gerenciarnoticias.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -85,7 +91,7 @@
                     <button class="col btn btn-dark" disabled type="submit">Área Privada</button>
                     <a class="col btn btn-outline-dark" type="submit" href="cadastro.php">Cadastrar-se</a>
                 </div>
-            <p class="my-2 text-align-center">
+            <p class="my-2 text-center">
                 Realize seu login para postar notícias quentinhas de CSGO.
             </p>
             <div class="form-floating">
@@ -96,11 +102,6 @@
               <input type="password" class="form-control" name="userpassword" id="floatingPassword" placeholder="Password">
               <label for="floatingPassword">Senha</label>
             </div>
-            <div class="checkbox mb-3">
-              <label>
-                <input type="checkbox" value="remember-me"> Lembrar-me
-              </label>
-            </div>
             <?php if(isset($_GET['erro'])) { ?>
                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
                     Verifique os dados informados.
@@ -108,6 +109,11 @@
                 </div>
             <?php } ?>
             <button class="w-100 btn btn-lg btn-dark" type="submit">Entrar</button>
+            <div class="checkbox mb-3">
+              <label>
+                <input type="checkbox" value="remember-me"> Lembrar-me
+              </label>
+            </div>
           </form>
           <p class="text-center mt-3">Sem cadastro? Crie um <a href="cadastro.php">agora</a>.</p>
         </main>

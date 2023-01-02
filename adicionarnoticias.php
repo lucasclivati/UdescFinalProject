@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(!$_SESSION['login']){
+    session_destroy();
+    header('Location:areaprivada.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -45,13 +52,13 @@
         </div>
     </nav>
     <body>
-        <div class="d-flex flex-row justify-content-between align-items-center py-1 px-1 bg-light">
+        <div class="d-flex flex-row justify-content-between align-items-center py-1 px-2 bg-light">
         <div class="col justify-content-start">
                 <h3>Adicionar</h3>
             </div>
             <div class="col d-flex justify-content-end align-items-center" style="height: 4.5em;">
                 <div class="d-flex justify-content-center btn-group" role="group" aria-label="Botoes Login" class="d-flex align-content-center">
-                        <a class="col btn btn-outline-dark btn-sm" type="submit" href="gerenciarnoticias.php"><i class="bi bi-file-earmark-plus-fill"></i>  Gerenciar</a>
+                        <a class="col btn btn-outline-dark btn-sm" type="submit" href="gerenciarnoticias.php"><i class="bi bi-file-earmark-plus-fill"></i> Gerenciar</a>
                         <button class="col btn btn-dark btn-sm" disabled type="submit"><i class="bi bi-newspaper"></i>  Adicionar</button>
                 </div>
                 <div class="mx-2 d-flex" style="height: 2rem;">
@@ -59,13 +66,13 @@
                 </div>
                 <div class="dropdown align-items-center">
                     <a href="#" class="link-dark align-items-center text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
-                        <strong>mdo</strong>
+                    <img src="files/userimgs/<?php echo(isset(($_SESSION['login']['userimg'])) ? ($_SESSION['login']['userimg']) : 'user2.png') ?>" alt="" width="32" height="32" class="rounded-circle me-1">
+                        <strong class="d-none d-md-inline-block"><?php echo strtok(($_SESSION['login']['userfullname']), " ")?></strong>
                     </a>
                     <ul class="dropdown-menu text-small shadow">
-                        <li><a class="dropdown-item" href="#">Editar perfil</a></li>
+                        <li><a class="dropdown-item" href="perfil.php">Editar perfil</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                        <li><a class="dropdown-item" href="logout.php">Logout</a></li>
                     </ul>
                 </div>
             </div>

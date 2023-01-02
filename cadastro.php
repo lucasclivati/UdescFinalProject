@@ -1,3 +1,9 @@
+<?php
+session_start();
+if($_SESSION['login']){
+    header('Location:gerenciarnoticias.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -85,26 +91,32 @@
             </div>
           </div>
             <main class="form-signin m-auto bg-light mb-5 border">
-                <form action="">
+                <form action="cadastrouser.php" method="post">
                     <div class="d-flex justify-content-center btn-group" role="group" aria-label="Botoes Login" class="d-flex align-content-center">
                         <a class="btn btn-outline-dark" type="submit" href="areaprivada.php">Área Privada</a>
                         <button class="btn btn-dark" disabled type="submit">Cadastrar-se</button>
                     </div>
-                    <p class="my-2">
+                    <p class="my-2 text-center">
                         Cadastre-se para postar notícias novas de CSGO.
                     </p>
                     <div class="form-floating">
-                        <input type="name" class="form-control" id="floatingName" placeholder="Nome Sobrenome">
+                        <input type="name" class="form-control" id="floatingName" name="userfullname" placeholder="Nome Sobrenome">
                         <label for="floatingInput">Nome Completo</label>
                     </div>
                     <div class="form-floating">
-                        <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com">
+                        <input type="email" class="form-control" id="floatingEmail" name="useremail" placeholder="name@example.com">
                         <label for="floatingEmail">Endereço E-mail</label>
                     </div>
                     <div class="form-floating">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <input type="password" class="form-control" id="floatingPassword" name="userpassword" placeholder="Password">
                         <label for="floatingPassword">Senha</label>
                     </div>
+                    <?php if(isset($_GET['erro'])) { ?>
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        Verifique os dados informados.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    <?php } ?>
                     <button class="w-100 btn btn-lg btn-dark" type="submit" id="cadastrarse">Cadastrar-se agora</button>
                 </form>
             </main>

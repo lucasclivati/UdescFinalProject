@@ -13,9 +13,13 @@
 .nav-link{
     color:#251629;
 }
-
 body{
     font-family: 'Fredoka', sans-serif;
+}
+p{
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.05rem;
+    color:#251629;
 }
 mark{
     background-color: #251629;
