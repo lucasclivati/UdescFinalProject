@@ -26,7 +26,8 @@ if ($user) {
     $_SESSION['login'] = [
         'iduser' => $user[0]['iduser'],
         'userfullname' => $user[0]['userfullname'],
-        'userimg' => $user[0]['userimg']
+        'userimg' => $user[0]['userimg'],
+        'useremail' => $user[0]['useremail'],
     ];
     var_dump($_SESSION['login']);
     header('Location:gerenciarnoticias.php');

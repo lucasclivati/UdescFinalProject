@@ -77,8 +77,31 @@ if(!$_SESSION['login']){
                 </div>
             </div>
         </div>
-        <div>
-            <p>Aqui vai um formulário pra adicionar notícias.</p>
+        <div class="container mb-4">
+            <form action="cadastronoticia.php" method="post">
+                <div class="mb-3">
+                    <label for="nottitulo" class="form-label">Título</label>
+                    <input type="text" class="form-control" name="nottitulo" aria-describedby="emailHelp">
+                    <div id="nottituloHelp" class="form-text">Máximo 50 caracteres.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="notsubtitulo" class="form-label">Sub-Título</label>
+                    <input type="text" class="form-control" name="notsubtitulo" aria-describedby="emailHelp">
+                    <div id="notsubtituloHelp" class="form-text">Máximo 150 caracteres.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="nottexto" class="form-label">Texto da notícia</label>
+                    <input type="text" class="form-control" name="nottexto" aria-describedby="emailHelp">
+                    <div id="nottextoHelp" class="form-text">Máximo 400 caracteres.</div>
+                </div>
+                <button type="submit" class="btn btn-dark">Enviar Notícia</button>
+            </form>
+            <?php if(isset($_GET['sucess'])) { ?>
+                <div  class="alert alert-success alert-dismissible fade show my-2" role="alert">
+                    Notícia cadastrada com sucesso.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <?php } ?>
         </div>
     </body>
     <div class="container">
