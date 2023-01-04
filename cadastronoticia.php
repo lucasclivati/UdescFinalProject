@@ -25,5 +25,4 @@ $noticia = $db->query($sqlInsertNoticia)->fetchAll();
 //var_dump($noticia);
 header('Location:adicionarnoticias.php?sucess=1');
 
-
 ?>
