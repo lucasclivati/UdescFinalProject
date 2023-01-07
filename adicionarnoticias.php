@@ -28,6 +28,7 @@ if(!$_SESSION['login']){
         <link rel="stylesheet" href="style.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.0/lottie.min.js"></script>
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <script src="https://cdn.tiny.cloud/1/4d2tncl2gavw0emj7m1i2635q5f6vg5no8uhsv9ob4d6q6h3/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     </head>
     <nav class="navbar navbar-expand-sm navbar-dark" id="menuprincipal">
         <div class="container-fluid">
@@ -77,24 +78,34 @@ if(!$_SESSION['login']){
                 </div>
             </div>
         </div>
-        <div class="container mb-4">
-            <form action="cadastronoticia.php" method="post">
+        <div class="container my-4">
+            <form action="cadastronoticia.php" method="post" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="nottitulo" class="form-label">Título</label>
-                    <input type="text" class="form-control" name="nottitulo" aria-describedby="emailHelp">
+                    <input type="text" class="form-control" name="nottitulo" aria-describedby="nottituloHelp" required>
                     <div id="nottituloHelp" class="form-text">Máximo 50 caracteres.</div>
                 </div>
                 <div class="mb-3">
                     <label for="notsubtitulo" class="form-label">Sub-Título</label>
-                    <input type="text" class="form-control" name="notsubtitulo" aria-describedby="emailHelp">
+                    <input type="text" class="form-control" name="notsubtitulo" aria-describedby="notsubtituloHelp" required>
                     <div id="notsubtituloHelp" class="form-text">Máximo 150 caracteres.</div>
                 </div>
                 <div class="mb-3">
-                    <label for="nottexto" class="form-label">Texto da notícia</label>
-                    <input type="text" class="form-control" name="nottexto" aria-describedby="emailHelp">
-                    <div id="nottextoHelp" class="form-text">Máximo 400 caracteres.</div>
+                    <label for="notimagem" class="form-label">Imagem Principal</label>
+                    <input type="file" accept=".jpg" class="form-control" id="notimagem" name="notimagem" aria-describedby="notimagemHelp" required>
+                    <div id="notimagemHelp" class="form-text">Máximo 150 caracteres.</div>
                 </div>
-                <button type="submit" class="btn btn-dark">Enviar Notícia</button>
+                <textarea id="mytextarea" name="nottexto" required>Preencha aqui sua notícia customizada.<br>Limite de 400 caracteres.<br> Para alterar a língua do corretor automático vá no menu <mark style="background-color: #251629; color:white;">Tools</mark> e em seguida <mark style="background-color: #251629; color:white;">Speellcheck language</mark>.</textarea>
+                
+                <!-- ESSE ERA UM FORMULÁRIO ANTIGO, MAS AS NOTÍCIAS FICARAM SEM FORMATAÇÃO, AI ADICIONEI O TINY
+                    <div class="mb-3">
+                    <label for="nottexto" class="form-label">Texto da notícia</label>
+                    <input type="text" class="form-control" name="nottexto" aria-describedby="nottextoHelp">
+                    <div id="nottextoHelp" class="form-text">Máximo 400 caracteres.</div>
+                    </div>
+                -->
+
+                <button type="submit" class="btn btn-dark mt-3">Enviar Notícia</button>
             </form>
             <?php if(isset($_GET['sucess'])) { ?>
                 <div  class="alert alert-success alert-dismissible fade show my-2" role="alert">
@@ -132,3 +143,19 @@ autoplay: true,
 name: 'demo animation'
 });
 </script>
+<script>
+    tinymce.init({
+      selector: 'textarea',
+      plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss',
+      toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+      tinycomments_mode: 'embedded',
+      tinycomments_author: 'Author name',
+      content_langs: [
+        { title: 'Portuguese', code: 'pt' }
+      ],
+      mergetags_list: [
+        { value: 'First.Name', title: 'First Name' },
+        { value: 'Email', title: 'Email' },
+      ]
+    });
+  </script>
