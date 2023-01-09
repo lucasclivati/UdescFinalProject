@@ -3,8 +3,7 @@ require_once 'src/parametros.php';
 
 $db = new PDO($dadosPDO['dns'], $dadosPDO['usuario'], $dadosPDO['senha']);
 
-//método sem criptografar e sem segurança, foi testado e deu ok//
-$sqlselectNoticias = "SELECT
+$selectNoticias = "SELECT
 idnoticia,
 useremail,
 nottitulo,
@@ -14,7 +13,7 @@ nottexto,
 notdataeditado,
 notimagem 
 FROM noticias";
-$noticias = $db->query($sqlselectNoticias)->fetchAll(PDO::FETCH_ASSOC);
-//var_dump($user);
-
+$noticias = $db->query($selectNoticias)->fetchAll(PDO::FETCH_ASSOC);
+//$noticias = $db->query($selectNoticias)->fetchAll();
+//var_dump($noticias);
 ?>

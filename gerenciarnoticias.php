@@ -66,7 +66,7 @@ if(!$_SESSION['login']){
                 </div>
                 <div class="dropdown align-items-center">
                     <a href="#" class="link-dark align-items-center text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="files/userimgs/<?php echo(isset(($_SESSION['login']['userimg'])) ? ($_SESSION['login']['userimg']) : 'user2.png') ?>" alt="" width="32" height="32" class="rounded-circle me-1">
+                        <img src="files/userimgs/<?php echo(isset(($_SESSION['login']['userimg'])) ? ($_SESSION['login']['userimg']) : 'imagempadraousuario.jpg') ?>" alt="" width="32" height="32" class="rounded-circle me-1">
                         <span class="d-none d-md-inline-block"><strong><?php echo strtok(($_SESSION['login']['userfullname']), " ")?></strong></span>
                     </a>
                     <ul class="dropdown-menu text-small shadow">
@@ -100,12 +100,12 @@ if(!$_SESSION['login']){
     </div>      
 </html>
 <script>
-var animation = bodymovin.loadAnimation({
-container: document.getElementById('terrorista'),
-path: 'files/animations/terrorista.json',
-render: 'svg',
-loop:true,
-autoplay: true,
-name: 'demo animation'
-});
+  /*var animation = bodymovin.loadAnimation({
+    container: document.getElementById('terrorista'),
+    path: 'files/animations/terrorista.json',
+    render: 'svg',
+    loop:true,
+    autoplay: true,
+    name: 'demo animation'
+  });*/
 </script>

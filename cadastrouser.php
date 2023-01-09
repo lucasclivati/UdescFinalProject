@@ -1,8 +1,8 @@
 <?php
 //essa página é chamada pelo formulário da página cadastro.php
-$useremail = isset($_POST['useremail']) ? $_POST['useremail'] : '';
-$userpassword = isset($_POST['userpassword']) ? $_POST['userpassword'] : '';
-$userfullname = isset($_POST['userfullname']) ? $_POST['userfullname'] : '';
+$useremail = isset($_POST['useremail']) ? $_POST['useremail'] : header('Location:cadastro.php?error=emailincorreto');;
+$userpassword = isset($_POST['userpassword']) ? $_POST['userpassword'] : header('Location:cadastro.php?error=senhaincorreta');
+$userfullname = isset($_POST['userfullname']) ? $_POST['userfullname'] : header('Location:cadastro.php?error=usuarioincorreto');
 
 require_once 'src/parametros.php';
 
@@ -16,5 +16,5 @@ $sqlinsertUser = "INSERT INTO user
 
 $newUser = $db->query($sqlinsertUser)->fetchAll();
 //var_dump($newUser);
-header('Location:areaprivada.php?');
+header('Location:areaprivada.php?sucess=usuariocriado');
 ?>

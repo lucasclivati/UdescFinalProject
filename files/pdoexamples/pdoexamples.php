@@ -31,7 +31,7 @@ var_dump($user);
 */
 
 /*
-$sqlselectUser = "SELECT 
+$selectUser = "SELECT 
                 useremail, userpassword, userfullname
                 FROM user
                 where useremail = 'lucascli@hotmail.com'
@@ -41,7 +41,7 @@ var_dump($user);
 */
 
 /*
-$sqlselectNoticias = "select useremail, nottitulo, notsubtitulo, notdatacriado, notdataeditado, notimagem from noticias";
+$selectNoticias = "select useremail, nottitulo, notsubtitulo, notdatacriado, notdataeditado, notimagem from noticias";
 $noticias = $db->query($sqlselectNoticias)->fetchAll();
 //var_dump($noticias);
 foreach($noticias as $noticiaAtual) {

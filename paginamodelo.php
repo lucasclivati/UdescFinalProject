@@ -78,12 +78,12 @@
         
 </html>
 <script>
-var animation = bodymovin.loadAnimation({
-container: document.getElementById('terrorista'),
-path: 'files/animations/terrorista.json',
-render: 'svg',
-loop:true,
-autoplay: true,
-name: 'demo animation'
-});
+  /*var animation = bodymovin.loadAnimation({
+    container: document.getElementById('terrorista'),
+    path: 'files/animations/terrorista.json',
+    render: 'svg',
+    loop:true,
+    autoplay: true,
+    name: 'demo animation'
+  });*/
 </script>

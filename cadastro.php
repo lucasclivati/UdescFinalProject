@@ -100,15 +100,15 @@ if($_SESSION['login']){
                         Cadastre-se para postar notícias novas de CSGO.
                     </p>
                     <div class="form-floating">
-                        <input type="name" class="form-control" id="floatingName" name="userfullname" placeholder="Nome Sobrenome">
+                        <input type="name" class="form-control" id="floatingName" name="userfullname" placeholder="Nome Sobrenome" required>
                         <label for="floatingInput">Nome Completo</label>
                     </div>
                     <div class="form-floating">
-                        <input type="email" class="form-control" id="floatingEmail" name="useremail" placeholder="name@example.com">
+                        <input type="email" class="form-control" id="floatingEmail" name="useremail" placeholder="name@example.com" required>
                         <label for="floatingEmail">Endereço E-mail</label>
                     </div>
                     <div class="form-floating">
-                        <input type="password" class="form-control" id="floatingPassword" name="userpassword" placeholder="Password">
+                        <input type="password" class="form-control" id="floatingPassword" name="userpassword" placeholder="Password" required>
                         <label for="floatingPassword">Senha</label>
                     </div>
                     <?php if(isset($_GET['erro'])) { ?>
@@ -142,12 +142,12 @@ if($_SESSION['login']){
         
 </html>
 <script>
-var animation = bodymovin.loadAnimation({
-container: document.getElementById('terrorista'),
-path: 'files/animations/terrorista.json',
-render: 'svg',
-loop:true,
-autoplay: true,
-name: 'demo animation'
-});
+  /*var animation = bodymovin.loadAnimation({
+    container: document.getElementById('terrorista'),
+    path: 'files/animations/terrorista.json',
+    render: 'svg',
+    loop:true,
+    autoplay: true,
+    name: 'demo animation'
+  });*/
 </script>
