@@ -27,7 +27,8 @@ mark{
     font-size: 1.05rem;
 }
 .carousel-inner{
-    background-color: #251629;
+   background-image: url(files/imgs/fundoak47.jpg);
+   background-color: #3d2e3b; /* esse era o background color usado antes de colocar a imagem com as ak-47 */
 }
 h1{
     color: #251629;

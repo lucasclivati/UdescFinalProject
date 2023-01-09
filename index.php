@@ -195,6 +195,7 @@
         </div>
 </html>
 <script>
+  //deprecated (o terrorista via json não funciona no infinityfree, argh)
   /*var animation = bodymovin.loadAnimation({
     container: document.getElementById('terrorista'),
     path: 'files/animations/terrorista.json',
