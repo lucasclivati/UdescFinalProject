@@ -53,6 +53,10 @@ if($_SESSION['login']){
             border-top-left-radius: 0;
             border-top-right-radius: 0;
             }
+
+            .form-signin input[type="magicKey"] {
+            margin: -1px;
+            }
         </style>
     </head>
     <nav class="navbar navbar-expand-sm navbar-dark" id="menuprincipal">
@@ -111,11 +115,15 @@ if($_SESSION['login']){
                         <input type="password" class="form-control" id="floatingPassword" name="userpassword" placeholder="Password" required>
                         <label for="floatingPassword">Senha</label>
                     </div>
-                    <?php if(isset($_GET['erro'])) { ?>
-                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                        Verifique os dados informados.
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    <div class="form-floating mb-2">
+                        <input type="magicKey" class="form-control" id="floatingMagicKey" name="magicKey" placeholder="MagicKey" required>
+                        <label for="floatingMagicKey">Chave Mágica</label>
                     </div>
+                    <?php if(isset($_GET['errormagickeyinvalida'])) { ?>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            Magic Key inválida. Tente a instituição de ensino deste curso.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
                     <?php } ?>
                     <button class="w-100 btn btn-lg btn-dark" type="submit" id="cadastrarse">Cadastrar-se agora</button>
                 </form>

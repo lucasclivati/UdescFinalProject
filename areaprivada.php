@@ -87,10 +87,16 @@ if($_SESSION['login']){
           </div>
         <main class="form-signin m-auto bg-light mb-5 border">
           <form action="login.php" method="post">
-                <div class="d-flex justify-content-center btn-group" role="group" aria-label="Botoes Login" class="d-flex align-content-center">
+                <div class="d-flex justify-content-center btn-group mb-2" role="group" aria-label="Botoes Login" class="d-flex align-content-center">
                     <button class="col btn btn-dark" disabled type="submit">Área Privada</button>
                     <a class="col btn btn-outline-dark" type="submit" href="cadastro.php">Cadastrar-se</a>
                 </div>
+            <?php if(isset($_GET['sucessusuariocriado'])) { ?>
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        Usuário criado com sucesso!
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                <?php } ?>
             <p class="my-2 text-center">
                 Realize seu login para postar notícias quentinhas de CSGO.
             </p>
