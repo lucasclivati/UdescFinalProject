@@ -91,9 +91,15 @@ if($_SESSION['login']){
                     <button class="col btn btn-dark" disabled type="submit">Área Privada</button>
                     <a class="col btn btn-outline-dark" type="submit" href="cadastro.php">Cadastrar-se</a>
                 </div>
-            <?php if(isset($_GET['sucessusuariocriado'])) { ?>
+                <?php if(isset($_GET['sucessusuariocriado'])) { ?>
                     <div class="alert alert-success alert-dismissible fade show" role="alert">
                         Usuário criado com sucesso!
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    <?php } ?>
+                <?php if(isset($_GET['erroemailemuso'])) { ?>
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        E-mail já em uso, faça seu login.
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                 <?php } ?>
@@ -108,7 +114,7 @@ if($_SESSION['login']){
               <input type="password" class="form-control" name="userpassword" id="floatingPassword" placeholder="Password">
               <label for="floatingPassword">Senha</label>
             </div>
-            <?php if(isset($_GET['erro'])) { ?>
+            <?php if(isset($_GET['errologin'])) { ?>
                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
                     Verifique os dados informados.
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>

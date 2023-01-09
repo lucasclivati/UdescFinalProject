@@ -29,7 +29,7 @@ if ($user) {
     header('Location:gerenciarnoticias.php');
 } else {
     session_destroy();
-    header('Location:areaprivada.php?erro=1');
+    header('Location:areaprivada.php?errologin'); //alert criado erro dados incorretos
 };
 
 //método usando bindParam não funcionou de jeito nenhum, deixei de fora, tentei trocando todas as aspas e tudo mais e não foi

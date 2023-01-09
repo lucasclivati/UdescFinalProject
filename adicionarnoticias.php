@@ -80,6 +80,18 @@ if(!$_SESSION['login']){
         </div>
         <div class="container my-4">
             <form action="cadastronoticia.php" method="post" enctype="multipart/form-data">
+                <?php if(isset($_GET['sucessaddnoticia'])) { ?>
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                Notícia adicionada com sucesso!
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                    <?php } ?>
+                <?php if(isset($_GET['erroarquivoinvalido'])) { ?>
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                Tamanho ou formato de arquivo inválido!
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                    <?php } ?>
                 <div class="mb-3">
                     <label for="nottitulo" class="form-label">Título</label>
                     <input type="text" class="form-control" name="nottitulo" aria-describedby="nottituloHelp" required>

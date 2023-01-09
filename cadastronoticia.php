@@ -36,13 +36,13 @@ if ($tamanhoValido && $tipoValido) {
                     VALUES 
                     ('{$nottitulo}','{$notsubtitulo}','{$nottexto}','{$_SESSION['login']['useremail']}',CURDATE(),'{$upload['name']}')";
                     $noticia = $db->query($sqlInsertNoticia)->fetchAll();
-                    header('Location:adicionarnoticias.php?sucess=1');
+                    header('Location:adicionarnoticias.php?sucessaddnoticia'); //alert criado noticia criada
     } else {
-        header('Location:adicionarnoticias.php?error=arquivoinvalido1');
+        header('Location:adicionarnoticias.php?erroarquivoinvalido'); //alert criado arquivo inválido
     }
 
 } else {
-    header('Location:adicionarnoticias.php?error=arquivoinvalido2');
+    header('Location:adicionarnoticias.php?erroarquivoinvalido'); //alert criado arquivo inválido
 }
 //var_dump($_SESSION['login']);
 //var_dump($nottitulo, $notsubtitulo, $nottexto);
