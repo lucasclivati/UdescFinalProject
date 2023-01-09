@@ -5,8 +5,7 @@ $dadosPDO = [
     'senha' => '87c6vq1x'
 ];
 
+//$db = new PDO($dadosPDO['dns'], $dadosPDO['usuario'], $dadosPDO['senha']);
 
-$db = new PDO($dadosPDO['dns'], $dadosPDO['usuario'], $dadosPDO['senha']);
-
-var_dump($db);
+//var_dump($db);
 ?>
