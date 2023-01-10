@@ -58,8 +58,29 @@
             </div>
           </div>
             <h2 class="text-center">Aqui devem aparecer todas as notícias via php.</h2>
+            <?php if(isset($_GET['noticiainvalida'])) { ?>
+                            <!-- <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                Notícia não encontrada ou excluída.
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div> -->
+                            <div>
+                                <div class="bd-example-snippet bd-code-snippet"><div class="bd-example bg-dark p-5 align-items-center">
+                                    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                                        <div class="toast-header">
+                                            <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#007aff"/></svg>
+                                            <strong class="me-auto">Bootstrap</strong>
+                                            <small class="text-muted">11 mins ago</small>
+                                            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                                        </div>
+                                        <div class="toast-body">
+                                            Hello, world! This is a toast message.
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    <?php } ?>
         </body>
-
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-1 my-1 border-top">
         <div class="col justify-content-start">

@@ -105,7 +105,7 @@ if(!$_SESSION['login']){
                 <div class="mb-3">
                     <label for="notimagem" class="form-label">Imagem Principal</label>
                     <input type="file" accept=".jpg" class="form-control" id="notimagem" name="notimagem" aria-describedby="notimagemHelp" required>
-                    <div id="notimagemHelp" class="form-text">Recomendado 4:3 - 1536x1024 pixels.</div>
+                    <div id="notimagemHelp" class="form-text">É possível arrastar o arquivo para a tela. Imagem recomendada 4:3 (1536x1024 pixels).</div>
                 </div>
                 <textarea id="mytextarea" name="nottexto" required>Preencha aqui sua notícia customizada.<br>Limite de 400 caracteres.<br> Para alterar a língua do corretor automático vá no menu <mark style="background-color: #251629; color:white;">Tools</mark> e em seguida <mark style="background-color: #251629; color:white;">Speellcheck language</mark>.</textarea>
                 
