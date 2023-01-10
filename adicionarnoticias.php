@@ -73,13 +73,13 @@ if(!$_SESSION['login']){
                     <ul class="dropdown-menu text-small shadow">
                         <li><a class="dropdown-item" href="perfil.php">Editar perfil</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="logout.php">Logout</a></li>
+                        <li><a class="dropdown-item" href="src/logout.php">Logout</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="container my-4">
-            <form action="cadastronoticia.php" method="post" enctype="multipart/form-data">
+            <form action="src/cadastronoticia.php" method="post" enctype="multipart/form-data">
                 <?php if(isset($_GET['sucessaddnoticia'])) { ?>
                             <div class="alert alert-success alert-dismissible fade show" role="alert">
                                 Notícia adicionada com sucesso!

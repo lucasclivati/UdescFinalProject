@@ -95,7 +95,7 @@ if($_SESSION['login']){
             </div>
           </div>
             <main class="form-signin m-auto bg-light mb-5 border">
-                <form action="cadastrouser.php" method="post">
+                <form action="src/cadastrouser.php" method="post">
                     <div class="d-flex justify-content-center btn-group" role="group" aria-label="Botoes Login" class="d-flex align-content-center">
                         <a class="btn btn-outline-dark" type="submit" href="areaprivada.php">Área Privada</a>
                         <button class="btn btn-dark" disabled type="submit">Cadastrar-se</button>

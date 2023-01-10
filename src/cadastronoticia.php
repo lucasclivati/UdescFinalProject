@@ -27,7 +27,7 @@ $tamanhoValido = $upload['size'] <= $tamanhoMaximo ? true : false;
 if ($tamanhoValido && $tipoValido) {
     if(move_uploaded_file($upload['tmp_name'], $arquivoDefinitivo)){
             session_start();
-            require_once 'src/parametros.php';
+            require_once 'parametros.php';
             
             $db = new PDO($dadosPDO['dns'], $dadosPDO['usuario'], $dadosPDO['senha']);
 
@@ -36,13 +36,13 @@ if ($tamanhoValido && $tipoValido) {
                     VALUES 
                     ('{$nottitulo}','{$notsubtitulo}','{$nottexto}','{$_SESSION['login']['useremail']}',CURDATE(),'{$upload['name']}')";
                     $noticia = $db->query($sqlInsertNoticia)->fetchAll();
-                    header('Location:adicionarnoticias.php?sucessaddnoticia'); //alert criado noticia criada
+                    header('Location:/adicionarnoticias.php?sucessaddnoticia'); //alert criado noticia criada
     } else {
-        header('Location:adicionarnoticias.php?erroarquivoinvalido'); //alert criado arquivo inválido
+        header('Location:/adicionarnoticias.php?erroarquivoinvalido'); //alert criado arquivo inválido
     }
 
 } else {
-    header('Location:adicionarnoticias.php?erroarquivoinvalido'); //alert criado arquivo inválido
+    header('Location:/adicionarnoticias.php?erroarquivoinvalido'); //alert criado arquivo inválido
 }
 //var_dump($_SESSION['login']);
 //var_dump($nottitulo, $notsubtitulo, $nottexto);

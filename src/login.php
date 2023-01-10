@@ -2,7 +2,7 @@
 $useremail = isset($_POST['useremail']) ? $_POST['useremail'] : '';
 $userpassword = isset($_POST['userpassword']) ? $_POST['userpassword'] : '';
 
-require_once 'src/parametros.php';
+require_once 'parametros.php';
 
 $db = new PDO($dadosPDO['dns'], $dadosPDO['usuario'], $dadosPDO['senha']);
 
@@ -26,10 +26,10 @@ if ($user) {
         'useremail' => $user[0]['useremail'],
     ];
     var_dump($_SESSION['login']);
-    header('Location:gerenciarnoticias.php');
+    header('Location:/gerenciarnoticias.php');
 } else {
     session_destroy();
-    header('Location:areaprivada.php?errologin'); //alert criado erro dados incorretos
+    header('Location:/areaprivada.php?errologin'); //alert criado erro dados incorretos
 };
 
 //método usando bindParam não funcionou de jeito nenhum, deixei de fora, tentei trocando todas as aspas e tudo mais e não foi

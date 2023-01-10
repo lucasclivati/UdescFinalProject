@@ -1,12 +1,9 @@
 <?php
-require_once 'src/parametros.php';
-$idnoticia = isset($_GET['idnoticia']) ? $_GET['idnoticia'] : header('Location:noticias.php?noticiainvalida');
-
-/*
+require_once 'parametros.php';
 
 $db = new PDO($dadosPDO['dns'], $dadosPDO['usuario'], $dadosPDO['senha']);
 
-$selectNoticiasById = "SELECT
+$selectNoticias = "SELECT
                         idnoticia,
                         useremail,
                         nottitulo,
@@ -16,8 +13,8 @@ $selectNoticiasById = "SELECT
                         notdataeditado,
                         notimagem 
                     FROM noticias
-                    where idnoticia = $GET";
-$noticias = $db->query($selectNoticiasById)->fetchAll(PDO::FETCH_ASSOC);
-//$noticias = $db->query($selectNoticias)->fetchAll();
-//var_dump($noticias);
+                    order by notdatacriado desc";
+//$noticias = $db->query($selectNoticias)->fetchAll(PDO::FETCH_ASSOC);
+$noticias = $db->query($selectNoticias)->fetchAll();
+var_dump($noticias);
 ?>
