@@ -53,7 +53,10 @@ if(!$_SESSION['login']){
     </nav>
     <body>
         <div class="d-flex flex-row justify-content-between align-items-center py-1 px-2 bg-light">
-            <div class="col">
+            <div class="col d-flex align-items-center">
+                <img src="/files/imgs/ak-47.png" alt="iconeak47" width="32" height="32" class="rounded-circle me-1">
+            </div>
+            <div class="col d-flex justify-content-center align-items-center">
                 <h3>Gerenciar</h3>
             </div>
             <div class="col d-flex justify-content-end align-items-center" style="height: 4.5em;">

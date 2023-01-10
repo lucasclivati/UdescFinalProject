@@ -53,8 +53,11 @@ if(!$_SESSION['login']){
         </div>
     </nav>
     <body>
-        <div class="d-flex flex-row justify-content-between align-items-center py-1 px-2 bg-light">
-        <div class="col justify-content-start">
+        <div class="d-flex flex-row justify-content-center align-items-center py-1 px-2 bg-light">
+            <div class="col d-flex align-items-center">
+                <img src="/files/imgs/ak-47.png" alt="iconeak47" width="32" height="32" class="rounded-circle me-1">
+            </div>
+            <div class="col d-flex justify-content-center align-items-center">
                 <h3>Adicionar</h3>
             </div>
             <div class="col d-flex justify-content-end align-items-center" style="height: 4.5em;">
@@ -94,20 +97,20 @@ if(!$_SESSION['login']){
                     <?php } ?>
                 <div class="mb-3">
                     <label for="nottitulo" class="form-label">Título</label>
-                    <input type="text" class="form-control" name="nottitulo" aria-describedby="nottituloHelp" required>
+                    <input type="text" class="form-control" name="nottitulo" aria-describedby="nottituloHelp" required maxlength="50">
                     <div id="nottituloHelp" class="form-text">Máximo 50 caracteres.</div>
                 </div>
                 <div class="mb-3">
                     <label for="notsubtitulo" class="form-label">Sub-Título</label>
-                    <input type="text" class="form-control" name="notsubtitulo" aria-describedby="notsubtituloHelp" required>
+                    <input type="text" class="form-control" name="notsubtitulo" aria-describedby="notsubtituloHelp" required maxlength="150">
                     <div id="notsubtituloHelp" class="form-text">Máximo 150 caracteres.</div>
                 </div>
                 <div class="mb-3">
                     <label for="notimagem" class="form-label">Imagem Principal</label>
-                    <input type="file" accept=".jpg" class="form-control" id="notimagem" name="notimagem" aria-describedby="notimagemHelp" required>
+                    <input type="file" accept=".webp, .jpg, .png, .WEBP, .JPG, .PNG" class="form-control" id="notimagem" name="notimagem" aria-describedby="notimagemHelp" required>
                     <div id="notimagemHelp" class="form-text">É possível arrastar o arquivo para a tela. Imagem recomendada 4:3 (1536x1024 pixels).</div>
                 </div>
-                <textarea id="mytextarea" name="nottexto" required>Preencha aqui sua notícia customizada.<br>Limite de 400 caracteres.<br> Para alterar a língua do corretor automático vá no menu <mark style="background-color: #251629; color:white;">Tools</mark> e em seguida <mark style="background-color: #251629; color:white;">Speellcheck language</mark>.</textarea>
+                <textarea id="mytextarea" name="nottexto" required placeholder="Preencha aqui o texto da notícia."></textarea>
                 
                 <!-- ESSE ERA UM FORMULÁRIO ANTIGO, MAS AS NOTÍCIAS FICARAM SEM FORMATAÇÃO, AI ADICIONEI O TINY
                     <div class="mb-3">
