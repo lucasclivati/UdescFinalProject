@@ -13,7 +13,7 @@ $upload = $_FILES['notimagem'];
 //definição do tamanho máximo do arquivo de imagem
 $tamanhoMaximo = 52428800; // 50mb
 //definindo o local em que o arquivo definitivo será salvo
-$arquivoDefinitivo = 'files/imgs/' . $upload['name'];
+$arquivoDefinitivo = 'files/notimgs/' . $upload['name'];
 //validação se o tipo do arquivo qualquer tipo de imagem, se for verdadeiro, a variável $tipoValido será true
 if($upload['type'] == "image/gif" or $upload['type'] == "image/GIF" or $upload['type'] == "image/png" or $upload['type'] == "image/PNG" or $upload['type'] == "image/jpeg" or $upload['type'] == "image/JPEG" or $upload['type'] == "image/jpg" or $upload['type'] == "image/JPG"  or $upload['type'] == "image/WEBP" or $upload['type'] == "image/webp") {
     $tipoValido = true;

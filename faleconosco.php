@@ -96,6 +96,38 @@
               <button type="submit" class="btn btn-outline-dark mb-5">Enviar</button>
             </form>
           </div>
+          <div class="section pt-0 pb-3 justify-content-center mb-3" style="background-color: #251629">
+              <div class="container pt-2">
+                <h2 class="title text-light my-3 text-center pb-3">Desenvolvedor</h2>
+                <div class="row">
+                  <div class="col ml-auto mr-auto">
+                    <div class="card card-profile">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <div class="card-image text-center">
+                            <a href="https://github.com/lucasclivati"><img class="card-img-top" src="files/imgs/gato3.jpg" alt="Card image cap"></a>
+                          </div>
+                        </div>
+                            <div class="col d-flex align-items-center">
+                                <div class="card-body">
+                                    <h3 class="card-title">Lucas Clivati</h3>
+                                    <h6 class="category"> Programador Fullstack</h6>
+                                    <p class="card-description">
+                                      Mba em Finanças pela FGV, Administrador UFSC, Programador UDESC. CEO da Trinitá.
+                                    </p>
+                                </div>
+                            </div>
+                      </div>
+                    </div>
+                  </div>
+                    <div class="d-flex align-items-center w-50 text-light mb-2 text-center">
+                      <h5>
+                        Website programado e desenvolvido por Lucas Clivati. Imagens geradas artificialmente via Midjourney. <br><br> Notícias fictícias com intuíto de concluir o curso Fullstack da Udesc Balneário Camboriú.
+                      </h5>
+                    </div>
+                </div>
+              </div>
+            </div>
         </body>
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-1 my-1 border-top">
