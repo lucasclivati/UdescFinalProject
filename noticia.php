@@ -58,15 +58,45 @@
             </div>
           </div>
             <h2 class="text-center">Aqui devem aparecer todas as notícias via php.</h2>
+            <div class="container" style="max-width: 25rem;">
+                <?php if(isset($_GET['noticiainvalida'])) { ?>
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    Notícia não encontrada ou excluída.
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                        <?php } ?>
+            </div>
             <main class="container d-flex align-items-center justify-content-center my-1 px-2">
-                <div class="" style="max-width: 25rem;">
-                    <?php if(isset($_GET['noticiainvalida'])) { ?>
-                                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                        Notícia não encontrada ou excluída.
-                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                    </div>
-                            <?php } ?>
-                </div>
+                <div class="container my-5">
+                    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+                      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+                        <h1 class="display-4 fw-bold lh-1">Lançado! Counter-strike Global Offensive é oficial</h1>
+                        <p class="display-6">Jogo chega na steam a partir de 21 de agosto de 2012! </p>
+                        <div>
+                            <span>Autor Notícia</span>
+                            |
+                            <span>Data Notícia</span> 
+                            |
+                            <span>Data Editado</span> 
+                        </div>
+                      </div>
+                      <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+                          <img class="rounded-3" src="files/imgs/novotorneioesl.webp" alt="" width="600">
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="container my-5">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam eaque molestias quia a ipsam quaerat est at provident commodi facilis aut, voluptatem vero enim laborum beatae fuga aperiam numquam rerum optio distinctio consequatur hic assumenda tempora possimus? Dolorum cum animi quaerat, aliquid fugit laborum harum corporis laudantium assumenda consequatur nostrum eveniet doloremque. Quos eveniet labore dolores, quasi laudantium minima temporibus dicta illo officia aspernatur eius nisi molestias qui placeat magni facere nam dignissimos assumenda libero quam! Possimus exercitationem commodi excepturi laboriosam dignissimos at quia numquam. Esse optio porro qui cumque, tempora, suscipit similique velit perspiciatis aspernatur aperiam, dolorem distinctio. Tempore distinctio mollitia suscipit illo tempora? Labore quae doloribus enim veniam deleniti placeat fuga tempore sequi libero. Quis alias necessitatibus, quidem illum nihil, quaerat odit obcaecati quae facere eius temporibus dolore impedit dignissimos commodi aspernatur ipsa ipsam corrupti modi? Saepe consequuntur error eius quo similique explicabo fugit facere rem pariatur tenetur.
+                        </p>
+                      </div>
+                      <hr>
+                      <div>
+                        <p>
+                        Imagens geradas artificialmente no Midjourney. Notícia fictícia para conclusão do curso programador Fullstack UDESC-BC.
+                        </p>
+                      </div>
+                  </div>
             </main>
         </body>
     <div class="container">
