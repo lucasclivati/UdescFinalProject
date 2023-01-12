@@ -2,65 +2,65 @@
 require_once 'parametros.php';
 
 try {
-$idnoticia = isset($_GET['idnoticia']) ? $_GET['idnoticia'] : header('Location:/noticias.php?noticiainvalida');
+    $idnoticia = isset($_GET['idnoticia']) ? $_GET['idnoticia'] : '';
 
-$db = new PDO($dadosPDO['dns'], $dadosPDO['usuario'], $dadosPDO['senha']);
+    if (!$idnoticia) {
+        throw new Exception('Deve ser informada uma notícia a ser localizada.');
+    }
 
-$selectNoticiasById = "SELECT
-                        idnoticia,
-                        useremail,
-                        nottitulo,
-                        notsubtitulo,
-                        notdatacriado,
-                        nottexto,
-                        notdataeditado,
-                        notimagem 
-                    FROM noticias
-                    where (idnoticia = '{$_GET['idnoticia']}')
-                    LIMIT 1";
-//$noticias = $db->query($selectNoticiasById)->fetchAll(PDO::FETCH_ASSOC); esse modo só é usado quando usa prepare, aí ele desfaz a associação
-$noticias = $db->query($selectNoticiasById)->fetchAll();
-$noticia = $noticias[0];
-//var_dump($noticia);
+    $db = new PDO($dadosPDO['dns'], $dadosPDO['usuario'], $dadosPDO['senha']);
+
+    $selectNoticiasById = "SELECT
+                            idnoticia,
+                            useremail,
+                            nottitulo,
+                            notsubtitulo,
+                            notdatacriado,
+                            nottexto,
+                            notdataeditado,
+                            notimagem 
+                        FROM noticias
+                        where (idnoticia = '{$_GET['idnoticia']}')
+                        LIMIT 1";
+    //$noticias = $db->query($selectNoticiasById)->fetchAll(PDO::FETCH_ASSOC); esse modo só é usado quando usa prepare, aí ele desfaz a associação
+    $noticias = $db->query($selectNoticiasById)->fetchAll();
+    $noticia = $noticias[0];
+    //var_dump($noticia);
 
     if(!$noticia) {
         throw new Exception('A notícia informada não existe.');
     }
 
-    $html = '<div class="modal-content">
-                    <div class="modal-header">
-                        <div class="modal-title fs-5">
-                            <h4 class="h4" id="nottitulo">' . $noticia['nottitulo'] . '</h4>
-                            <h6 class="h6" id="notsubtitulo">' . $noticia['notsubtitulo'] . '</h6>
+    $html = '
+                <div class="container my-5">
+                    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+                    <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+                        <h1 class="display-4 fw-bold lh-1">'. $noticia['nottitulo'] . '</h1>
+                        <p class="display-6">'.$noticia['notsubtitulo'].'</p>
+                        <div>
+                            <span>Notícia postada por '.$noticia['useremail'].' em '.$noticia['notdatacriado'].'.</span> 
                         </div>
                     </div>
-                    <div class="modal-body">
-                        <div id="notimagem">
-                            <img src="/files/imgs/' . $noticia['notimagem'] . '" alt="errocarregarimagem">
-                        </div>
-                        <div id="nottexto">' . $noticia['nottexto'] . '</div>
+                    <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+                        <img class="rounded-3" src="/files/notimgs/'.$noticia['notimagem'].'" alt="" width="600">
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                     </div>
-                </div>';
-} catch (Exception $e) {
-    $html = '<div class="modal-content">
-        <div class="modal-header">
-            <div class="modal-title fs-5">
-                <h4 class="h4">Erro no carregamento</h4>
-            </div>
-        </div>
-        <div class="modal-body">
-            <div>
-                <p>Não foi possivel carregar detalhes do produtos.</p>
-                <p>' . $e->getMessage() . '</p>
-            </div>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-        </div>
-    </div>';
+                    <hr>
+                    <div class="container my-5">
+                        <p>
+                        '.$noticia['nottexto'].'
+                        </p>
+                    </div>
+                    <hr>
+                </div>
+                <div>
+                    <p style="font-size: 0.85rem">
+                        Imagens geradas artificialmente no Midjourney. Notícia fictícia para conclusão do curso programador Fullstack UDESC-BC.
+                    </p>
+                </div>
+                ';
+}  catch (Exception $e) {
+    $html = '<p style="m-2"> Não foi possível carregar a notícia.</p>';
 }
 
 echo $html;

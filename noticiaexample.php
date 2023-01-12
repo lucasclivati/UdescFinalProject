@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Página Modelo | CSGO NEWS - Seu portal de Notícias de Counter-Strike</title>
+        <title>Notícia | CSGO NEWS - Seu portal de Notícias de Counter-Strike</title>
         <link rel="shortcut icon" href="files/logo/icon.png" type="image/x-icon">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,15 +46,55 @@
         </div>
     </nav>
     <body>
-        <div class="container">
+        <div class="container my-1 px-2">
             <div class="d-flex flex-wrap justify-content-center mt-4">
-            <div id="terrorista">
+                <div id="terrorista">
                 </div>
                 <div><h1 class="display-3 fw-semibold border-bottom">Notícias Atuais</h1>
                 </div>
             </div>
           </div>
-
+            <div class="container" style="max-width: 25rem;">
+                <?php if(isset($_GET['noticiainvalida'])) { ?>
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    Notícia não encontrada ou excluída.
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                        <?php } ?>
+            </div>
+            <main class="container d-flex align-items-center justify-content-center my-1 px-2">
+                <div class="container my-5">
+                    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+                      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+                        <h1 class="display-4 fw-bold lh-1">Lançado! Counter-strike Global Offensive é oficial</h1>
+                        <p class="display-6">Jogo chega na steam a partir de 21 de agosto de 2012! </p>
+                        <div>
+                            <span>Autor Notícia</span>
+                            |
+                            <span>Data Notícia</span> 
+                            |
+                            <span>Data Editado</span> 
+                        </div>
+                      </div>
+                      <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+                          <img class="rounded-3" src="files/imgs/novotorneioesl.webp" alt="" width="600">
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="container my-5">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam eaque molestias quia a ipsam quaerat est at provident commodi facilis aut, voluptatem vero enim laborum beatae fuga aperiam numquam rerum optio distinctio consequatur hic assumenda tempora possimus? Dolorum cum animi quaerat, aliquid fugit laborum harum corporis laudantium assumenda consequatur nostrum eveniet doloremque. Quos eveniet labore dolores, quasi laudantium minima temporibus dicta illo officia aspernatur eius nisi molestias qui placeat magni facere nam dignissimos assumenda libero quam! Possimus exercitationem commodi excepturi laboriosam dignissimos at quia numquam. Esse optio porro qui cumque, tempora, suscipit similique velit perspiciatis aspernatur aperiam, dolorem distinctio. Tempore distinctio mollitia suscipit illo tempora? Labore quae doloribus enim veniam deleniti placeat fuga tempore sequi libero. Quis alias necessitatibus, quidem illum nihil, quaerat odit obcaecati quae facere eius temporibus dolore impedit dignissimos commodi aspernatur ipsa ipsam corrupti modi? Saepe consequuntur error eius quo similique explicabo fugit facere rem pariatur tenetur.
+                        </p>
+                      </div>
+                      <hr>
+                      <div>
+                        <p>
+                        Imagens geradas artificialmente no Midjourney. Notícia fictícia para conclusão do curso programador Fullstack UDESC-BC.
+                        </p>
+                      </div>
+                  </div>
+            </main>
+        </body>
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-1 my-1 border-top">
         <div class="col justify-content-start">
@@ -75,12 +115,12 @@
         
 </html>
 <script>
-  var animation = bodymovin.loadAnimation({
-    container: document.getElementById('terrorista'),
-    path: 'files/animations/terrorista.json',
-    render: 'svg',
-    loop:true,
-    autoplay: true,
-    name: 'demo animation'
-  });
+var animation = bodymovin.loadAnimation({
+container: document.getElementById('terrorista'),
+path: 'files/animations/terrorista.json',
+render: 'svg',
+loop:true,
+autoplay: true,
+name: 'demo animation'
+});
 </script>

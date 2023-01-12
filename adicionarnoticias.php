@@ -26,6 +26,7 @@ if(!$_SESSION['login']){
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
         <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.0/lottie.min.js"></script>
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
         <script src="https://cdn.tiny.cloud/1/4d2tncl2gavw0emj7m1i2635q5f6vg5no8uhsv9ob4d6q6h3/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
@@ -148,16 +149,6 @@ if(!$_SESSION['login']){
         </footer>
     </div>      
 </html>
-<script>
-  /*var animation = bodymovin.loadAnimation({
-    container: document.getElementById('terrorista'),
-    path: 'files/animations/terrorista.json',
-    render: 'svg',
-    loop:true,
-    autoplay: true,
-    name: 'demo animation'
-  });*/
-</script>
 <script>
     tinymce.init({
       selector: 'textarea',

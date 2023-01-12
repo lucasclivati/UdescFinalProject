@@ -19,6 +19,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
         <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.0/lottie.min.js"></script>
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     </head>
@@ -46,18 +47,7 @@
     </nav>
     <body>
         <div class="container my-1 px-2">
-            <div class="d-flex flex-wrap justify-content-center mt-4">
-              <!-- essa div debaixo puxaria automaticamente o terrorista girando via js (var animation), mas o inifinity não carregou arquivo json.
-                <div id="terrorista">
-                </div>-->
-                <div>
-                  <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_smu40fjv.json"  background="transparent"  speed="1"  style="height: 80px;"  loop autoplay></lottie-player>
-                </div>
-                <div><h1 class="display-3 fw-semibold border-bottom">Notícias Atuais</h1>
-                </div>
-            </div>
           </div>
-            <h2 class="text-center">Aqui devem aparecer todas as notícias via php.</h2>
             <div class="container" style="max-width: 25rem;">
                 <?php if(isset($_GET['noticiainvalida'])) { ?>
                                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -67,36 +57,9 @@
                         <?php } ?>
             </div>
             <main class="container d-flex align-items-center justify-content-center my-1 px-2">
-                <div class="container my-5">
-                    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
-                      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
-                        <h1 class="display-4 fw-bold lh-1">Lançado! Counter-strike Global Offensive é oficial</h1>
-                        <p class="display-6">Jogo chega na steam a partir de 21 de agosto de 2012! </p>
-                        <div>
-                            <span>Autor Notícia</span>
-                            |
-                            <span>Data Notícia</span> 
-                            |
-                            <span>Data Editado</span> 
-                        </div>
-                      </div>
-                      <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
-                          <img class="rounded-3" src="files/imgs/novotorneioesl.webp" alt="" width="600">
-                      </div>
-                    </div>
-                    <hr>
-                    <div class="container my-5">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam eaque molestias quia a ipsam quaerat est at provident commodi facilis aut, voluptatem vero enim laborum beatae fuga aperiam numquam rerum optio distinctio consequatur hic assumenda tempora possimus? Dolorum cum animi quaerat, aliquid fugit laborum harum corporis laudantium assumenda consequatur nostrum eveniet doloremque. Quos eveniet labore dolores, quasi laudantium minima temporibus dicta illo officia aspernatur eius nisi molestias qui placeat magni facere nam dignissimos assumenda libero quam! Possimus exercitationem commodi excepturi laboriosam dignissimos at quia numquam. Esse optio porro qui cumque, tempora, suscipit similique velit perspiciatis aspernatur aperiam, dolorem distinctio. Tempore distinctio mollitia suscipit illo tempora? Labore quae doloribus enim veniam deleniti placeat fuga tempore sequi libero. Quis alias necessitatibus, quidem illum nihil, quaerat odit obcaecati quae facere eius temporibus dolore impedit dignissimos commodi aspernatur ipsa ipsam corrupti modi? Saepe consequuntur error eius quo similique explicabo fugit facere rem pariatur tenetur.
-                        </p>
-                      </div>
-                      <hr>
-                      <div>
-                        <p>
-                        Imagens geradas artificialmente no Midjourney. Notícia fictícia para conclusão do curso programador Fullstack UDESC-BC.
-                        </p>
-                      </div>
-                  </div>
+                <!-- noticia vem dinamicamente do noticiabyid -->
+                <div id="htmlnoticia">
+                </div>
             </main>
         </body>
     <div class="container">
@@ -116,15 +79,26 @@
         </div>
         </footer>
     </div>
-        
 </html>
 <script>
-var animation = bodymovin.loadAnimation({
-container: document.getElementById('terrorista'),
-path: 'files/animations/terrorista.json',
-render: 'svg',
-loop:true,
-autoplay: true,
-name: 'demo animation'
-});
+    // Carregar noticia
+    let idnoticia;
+    var $_GET = {};
+        document.location.search.replace(/\??(?:([^=]+)=([^&]*)&?)/g, function () {
+            function decode(s) {
+                return decodeURIComponent(s.split("+").join(" "));
+            }
+
+            $_GET[decode(arguments[1])] = decode(arguments[2]);
+        });
+
+    idnoticia = $_GET['idnoticia'];
+    $.get('src/listarnoticiasbyid.php', {
+            idnoticia : idnoticia
+        })
+        .done(function(html) {
+            $('#htmlnoticia').append(html);
+            console.log(html);
+            console.log(idnoticia);
+        });
 </script>
