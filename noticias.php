@@ -92,7 +92,6 @@
 </html>
 <script>
     let noticias;
-
     $.get('src/listarnoticias.php')
         .done(function(html) {
             $('#htmlnoticia').append(html);
