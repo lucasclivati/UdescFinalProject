@@ -63,6 +63,12 @@
                                     </div>
                             <?php } ?>
                 </div>
+
+                <div class="container d-flex align-items-center justify-content-center my-1 px-2">
+                    <!-- noticia vem dinamicamente pelo listarnoticias.php -->
+                    <div id="htmlnoticia">
+                    </div>
+                </div>
             </main>
         </body>
     <div class="container">
@@ -85,12 +91,11 @@
         
 </html>
 <script>
-var animation = bodymovin.loadAnimation({
-container: document.getElementById('terrorista'),
-path: 'files/animations/terrorista.json',
-render: 'svg',
-loop:true,
-autoplay: true,
-name: 'demo animation'
-});
+    let noticias;
+
+    $.get('src/listarnoticias.php')
+        .done(function(html) {
+            $('#htmlnoticia').append(html);
+            console.log(html);
+        });
 </script>

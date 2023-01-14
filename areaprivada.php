@@ -118,11 +118,6 @@ if($_SESSION['login']){
                 </div>
             <?php } ?>
             <button class="w-100 btn btn-lg btn-dark" type="submit">Entrar</button>
-            <div class="checkbox mb-3">
-              <label>
-                <input type="checkbox" value="remember-me"> Lembrar-me
-              </label>
-            </div>
           </form>
           <p class="text-center mt-3">Sem cadastro? Crie um <a href="cadastro.php">agora</a>.</p>
         </main>
