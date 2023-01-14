@@ -46,9 +46,11 @@
         </div>
     </nav>
     <body>
-        <div class="container my-1 px-2">
+    <div class="container">
             <div class="d-flex flex-wrap justify-content-center mt-4">
-                <div><h1 class="display-3 fw-semibold border-bottom">Todas as Notícias</h1>
+            <div id="terrorista">
+            </div>
+                <div><h1 class="display-3 fw-semibold border-bottom">Todas Notícias</h1>
                 </div>
             </div>
           </div>
@@ -93,4 +95,14 @@
             $('#htmlnoticias').append(html);
             console.log(html);
         });
+</script>
+<script>
+  var animation = bodymovin.loadAnimation({
+    container: document.getElementById('terrorista'),
+    path: 'files/animations/terrorista.json',
+    render: 'svg',
+    loop:true,
+    autoplay: true,
+    name: 'demo animation'
+  });
 </script>

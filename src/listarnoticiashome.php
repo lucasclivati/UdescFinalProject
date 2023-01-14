@@ -17,7 +17,8 @@ try {
                         notdataeditado,
                         notimagem 
                     FROM noticias
-                    order by notdatacriado desc";
+                    order by notdatacriado desc
+                    limit 10";
 //$noticias = $db->query($selectNoticias)->fetchAll(PDO::FETCH_ASSOC);
 $noticias = $db->query($selectNoticias)->fetchAll();
 //var_dump($noticias);

@@ -16,6 +16,7 @@ try {
                             nottitulo,
                             notsubtitulo,
                             notdatacriado,
+                            date_format(notdatacriado, '%m/%d/%Y') as notdatacriadoformated,
                             nottexto,
                             notdataeditado,
                             notimagem 
@@ -38,11 +39,11 @@ try {
                         <h1 class="display-4 fw-bold lh-1">'. $noticia['nottitulo'] . '</h1>
                         <p class="display-6">'.$noticia['notsubtitulo'].'</p>
                         <div>
-                            <span>Notícia postada por '.$noticia['useremail'].' em '.$noticia['notdatacriado'].'.</span> 
+                            <span>Notícia postada por '.$noticia['useremail'].' em '.$noticia['notdatacriadoformated'].'.</span> 
                         </div>
                     </div>
                     <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
-                        <img class="rounded-3" src="/files/notimgs/'.$noticia['notimagem'].'" alt="Imagem" width="600">
+                        <img class="rounded-3 img-fluid" src="/files/notimgs/'.$noticia['notimagem'].'" alt="Imagem">
                     </div>
                     </div>
                     <hr>
@@ -55,7 +56,7 @@ try {
                 </div>
                 <div>
                     <p style="font-size: 0.85rem">
-                        Imagens geradas artificialmente no Midjourney. Notícia fictícia para conclusão do curso programador Fullstack UDESC-BC.
+                        Imagens geradas artificialmente no Midjourney. <br>Notícia fictícia para conclusão do curso programador Fullstack UDESC-BC.
                     </p>
                 </div>
                 ';
