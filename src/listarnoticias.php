@@ -26,6 +26,7 @@ if(!$noticias) {
 }
 
 $html = '';
+
 foreach ($noticias as $noticia) {
 $html = '
             <div class="col-md-6">
@@ -48,7 +49,5 @@ $html = '
 }
 
 echo $html;
-
-var_dump($noticiaseach);
 
 ?>
