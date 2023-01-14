@@ -22,6 +22,10 @@ try {
 $noticias = $db->query($selectNoticias)->fetchAll();
 //var_dump($noticias);
 
+if(!$noticias) {
+    throw new Exception('UHOH! Não foi possível carregas as notícias.');
+}
+
 $html = '';
 foreach ($noticias as $noticia) {
     $html .= '
@@ -41,7 +45,7 @@ foreach ($noticias as $noticia) {
             ';
     }
 }  catch (Exception $e) {
-    $html = '<p style="m-2"> Não foi possível carregar as notícias.</p>';
+    $html = '<p style="m-2"> Ops! Algo ocorreu e não foi possível carregar as notícias.</p>';
 }
 
 echo $html;

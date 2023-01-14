@@ -18,10 +18,15 @@ try {
                         notimagem 
                     FROM noticias
                     order by notdatacriado desc
-                    limit 10";
+                    limit 3";
 //$noticias = $db->query($selectNoticias)->fetchAll(PDO::FETCH_ASSOC);
 $noticias = $db->query($selectNoticias)->fetchAll();
 //var_dump($noticias);
+
+
+if(!$noticias) {
+    throw new Exception('UHOH! Não foi possível carregas as notícias.');
+}
 
 $html = '';
 foreach ($noticias as $noticia) {
@@ -45,6 +50,6 @@ foreach ($noticias as $noticia) {
     $html = '<p style="m-2"> Não foi possível carregar as notícias.</p>';
 }
 
-echo $html;
+//echo $html;
 
 ?>

@@ -1,3 +1,4 @@
+<?php include('src/listarnoticiashome.php');?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -66,26 +67,26 @@
             </div>
             <div class="carousel-inner">
             <div class="carousel-item active">
-                <a href="#">
-                    <img style="max-height:35rem; max-width:fit-content; margin: auto;" src="files/imgs/outsiderscampea.jpg" class="d-block w-100" alt="img1">
+                <a href="http://lucascliprojetofinaludesc.infinityfreeapp.com/noticia.php?idnoticia=<?php echo $noticias[0]['idnoticia'] ?>">
+                    <img style="max-height:35rem; max-width:fit-content; margin: auto;" src="/files/notimgs/<?php echo $noticias[0]['notimagem'] ?>" class="d-block w-100" alt="img1">
                 </a>
                 <div class="carousel-caption">
-                <a href="#" class="text-white text-decoration-none"><h5><mark>A GRANDE CAMPEÃ DO MAJOR RIO 2022</mark></h5></a>
-                <a href="#" class="text-white text-decoration-none"><p><mark>Equipe Russa é Campeã do Major Rio 2022. <br> Conheça a Outsiders.</mark></p></a>
+                <a href="http://lucascliprojetofinaludesc.infinityfreeapp.com/noticia.php?idnoticia=<?php echo $noticias[0]['idnoticia'] ?>" class="text-white text-decoration-none"><h5><mark><?php echo $noticias[0]['nottitulo'] ?></mark></h5></a>
+                <a href="http://lucascliprojetofinaludesc.infinityfreeapp.com/noticia.php?idnoticia=<?php echo $noticias[0]['idnoticia'] ?>" class="text-white text-decoration-none"><p><mark><?php echo $noticias[0]['notsubtitulo'] ?></mark></p></a>
                 </div>
             </div>
             <div class="carousel-item">
-                <a href="#"><img style="max-height:35rem; max-width:fit-content; margin-left: auto; margin-right: auto;" src="files/imgs/novotorneioesl.webp" class="d-block w-100" alt="img2"></a>
+                <a href="http://lucascliprojetofinaludesc.infinityfreeapp.com/noticia.php?idnoticia=<?php echo $noticias[1]['idnoticia'] ?>"><img style="max-height:35rem; max-width:fit-content; margin-left: auto; margin-right: auto;" src="/files/notimgs/<?php echo $noticias[1]['notimagem'] ?>" class="d-block w-100" alt="img2"></a>
                 <div class="carousel-caption">
-                <a href="#" class="text-white text-decoration-none"><h5><mark>CONFIRMADO! ESL organizará torneio em 2023.</mark></h5></a>
-                <a href="#" class="text-white text-decoration-none"><p><mark>Após o sucesso do Major Rio, organizadora realizará campeonato em 2023. Sabe onde?</mark></p></a>
+                <a href="http://lucascliprojetofinaludesc.infinityfreeapp.com/noticia.php?idnoticia=<?php echo $noticias[1]['idnoticia'] ?>" class="text-white text-decoration-none"><h5><mark><?php echo $noticias[1]['nottitulo'] ?></mark></h5></a>
+                <a href="http://lucascliprojetofinaludesc.infinityfreeapp.com/noticia.php?idnoticia=<?php echo $noticias[1]['idnoticia'] ?>" class="text-white text-decoration-none"><p><mark><?php echo $noticias[1]['notsubtitulo'] ?></mark></p></a>
                 </div>
             </div>
             <div class="carousel-item">
-                <a href="#"><img style="max-height:35rem; max-width:fit-content; margin-left: auto; margin-right: auto;" src="files/imgs/csgo-image.jpeg" class="d-block w-100" alt="img3"></a>
+                <a href="http://lucascliprojetofinaludesc.infinityfreeapp.com/noticia.php?idnoticia=<?php echo $noticias[2]['idnoticia'] ?>"><img style="max-height:35rem; max-width:fit-content; margin-left: auto; margin-right: auto;" src="/files/notimgs/<?php echo $noticias[2]['notimagem'] ?>" class="d-block w-100" alt="img3"></a>
                 <div class="carousel-caption">
-                <a href="#" class="text-decoration-none"><h5><mark>Já sabe jogar CSGO?</mark></h5></a>
-                <a href="#" class="text-decoration-none"><p><mark>Dicas para você não ficar pra trás nesse <br> jogo que é sucesso por duas décadas!</mark></p></a>
+                <a href="http://lucascliprojetofinaludesc.infinityfreeapp.com/noticia.php?idnoticia=<?php echo $noticias[2]['idnoticia'] ?>" class="text-decoration-none"><h5><mark><?php echo $noticias[2]['notsubtitulo'] ?></mark></h5></a>
+                <a href="http://lucascliprojetofinaludesc.infinityfreeapp.com/noticia.php?idnoticia=<?php echo $noticias[2]['idnoticia'] ?>" class="text-decoration-none"><p><mark><?php echo $noticias[2]['notsubtitulo'] ?></mark></p></a>
                 </div>
             </div>
             </div>
@@ -201,3 +202,4 @@
     name: 'demo animation'
   });
 </script>
+
