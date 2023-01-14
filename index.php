@@ -100,8 +100,8 @@
     </div>
         <div class="container">
           <div class="d-flex flex-wrap justify-content-center mt-4">
-          <div id="terrorista">
-                </div>
+              <div id="terrorista">
+              </div>
               <div><h1 class="display-3 fw-semibold border-bottom">Notícias Atuais</h1>
               </div>
           </div>
@@ -192,13 +192,12 @@
         </div>
 </html>
 <script>
-  //deprecated (o terrorista via json não funciona no infinityfree, argh)
-  /*var animation = bodymovin.loadAnimation({
+  var animation = bodymovin.loadAnimation({
     container: document.getElementById('terrorista'),
     path: 'files/animations/terrorista.json',
     render: 'svg',
     loop:true,
     autoplay: true,
     name: 'demo animation'
-  });*/
+  });
 </script>

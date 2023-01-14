@@ -33,7 +33,7 @@ try {
     }
 
     $html = '
-                <div class="container my-5">
+                <div class="container mt-5 mb-2">
                     <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
                     <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
                         <h1 class="display-4 fw-bold lh-1">'. $noticia['nottitulo'] . '</h1>
@@ -53,6 +53,10 @@ try {
                         </p>
                     </div>
                     <hr>
+                </div>
+                <div class="d-flex">
+                    <a href="noticias.php" class="btn btn-dark my-2">Todas notícias</a>
+                    <<a href="index.php" class="btn btn-outline-dark my-2">Home</a>
                 </div>
                 <div>
                     <p style="font-size: 0.85rem">
