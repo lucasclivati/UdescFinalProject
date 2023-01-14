@@ -19,6 +19,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
         <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.0/lottie.min.js"></script>
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     </head>
@@ -47,13 +48,10 @@
     <body>
         <div class="container my-1 px-2">
             <div class="d-flex flex-wrap justify-content-center mt-4">
-            <div id="terrorista">
-                </div>
-                <div><h1 class="display-3 fw-semibold border-bottom">Notícias Atuais</h1>
+                <div><h1 class="display-3 fw-semibold border-bottom">Todas as Notícias</h1>
                 </div>
             </div>
           </div>
-            <h2 class="text-center">Aqui devem aparecer todas as notícias via php.</h2>
             <main class="container d-flex align-items-center justify-content-center my-1 px-2">
                 <div class="" style="max-width: 25rem;">
                     <?php if(isset($_GET['noticiainvalida'])) { ?>
@@ -63,11 +61,10 @@
                                     </div>
                             <?php } ?>
                 </div>
-
                 <div class="container d-flex align-items-center justify-content-center my-1 px-2">
                     <!-- noticia vem dinamicamente pelo listarnoticias.php -->
-                    <div id="htmlnoticia">
-                    </div>
+                        <div id="htmlnoticias" class="row mb-2">
+                        </div>
                 </div>
             </main>
         </body>
@@ -91,10 +88,9 @@
         
 </html>
 <script>
-    let noticias;
     $.get('src/listarnoticias.php')
         .done(function(html) {
-            $('#htmlnoticia').append(html);
+            $('#htmlnoticias').append(html);
             console.log(html);
         });
 </script>

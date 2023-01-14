@@ -42,7 +42,7 @@ try {
                         </div>
                     </div>
                     <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
-                        <img class="rounded-3" src="/files/notimgs/'.$noticia['notimagem'].'" alt="" width="600">
+                        <img class="rounded-3" src="/files/notimgs/'.$noticia['notimagem'].'" alt="Imagem" width="600">
                     </div>
                     </div>
                     <hr>
