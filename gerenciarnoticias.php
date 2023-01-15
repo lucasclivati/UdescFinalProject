@@ -81,8 +81,8 @@ if(!$_SESSION['login']){
                 </div>
             </div>
         </div>
-        <div>
-            <p>Aqui vai uma tabela com todas as noticias.</p>
+        <div class="text-center my-3">
+            <p>Aqui vai uma tabela com persmissão de edição das noticias.</p>
         </div>
     </body>
     <div class="container">

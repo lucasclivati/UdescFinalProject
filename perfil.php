@@ -29,7 +29,6 @@ if(!$_SESSION['login']){
         <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.0/lottie.min.js"></script>
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-        <script src="https://cdn.tiny.cloud/1/4d2tncl2gavw0emj7m1i2635q5f6vg5no8uhsv9ob4d6q6h3/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     </head>
     <nav class="navbar navbar-expand-sm navbar-dark" id="menuprincipal">
         <div class="container-fluid">
@@ -54,25 +53,25 @@ if(!$_SESSION['login']){
         </div>
     </nav>
     <body>
-        <div class="d-flex flex-row justify-content-center align-items-center py-1 px-2 bg-light">
+        <div class="d-flex flex-row justify-content-between align-items-center py-1 px-2 bg-light">
             <div class="col d-flex align-items-center">
                 <img src="/files/imgs/ak-47.png" alt="iconeak47" width="32" height="32" class="rounded-circle me-1">
             </div>
             <div class="col d-flex justify-content-center align-items-center">
-                <h3>Adicionar</h3>
+                <h3>Gerenciar</h3>
             </div>
             <div class="col d-flex justify-content-end align-items-center" style="height: 4.5em;">
-                <div class="d-flex justify-content-center btn-group" role="group" aria-label="Botoes Login" class="d-flex align-content-center">
-                        <a class="col btn btn-outline-dark btn-sm" type="submit" href="gerenciarnoticias.php"><i class="bi bi-file-earmark-plus-fill"></i> Gerenciar</a>
-                        <button class="col btn btn-dark btn-sm" disabled type="submit"><i class="bi bi-newspaper"></i>  Adicionar</button>
+                <div class="justify-content-center btn-group" role="group" aria-label="Botoes Login">
+                        <button class="col btn btn-dark btn-sm" disabled type="submit"><i class="bi bi-newspaper"></i>  Gerenciar</button>
+                        <a class="col btn btn-outline-dark btn-sm" type="submit" href="adicionarnoticias.php"><i class="bi bi-file-earmark-plus-fill"></i> Adicionar</a>
                 </div>
                 <div class="mx-2 d-flex" style="height: 2rem;">
                     <div class="vr"></div>
                 </div>
                 <div class="dropdown align-items-center">
                     <a href="#" class="link-dark align-items-center text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="files/userimgs/<?php echo(isset(($_SESSION['login']['userimg'])) ? ($_SESSION['login']['userimg']) : 'imagempadraousuario.jpg') ?>" alt="" width="32" height="32" class="rounded-circle me-1">
-                        <strong class="d-none d-md-inline-block"><?php echo strtok(($_SESSION['login']['userfullname']), " ")?></strong>
+                        <img src="files/userimgs/<?php echo(isset(($_SESSION['login']['userimg'])) ? ($_SESSION['login']['userimg']) : 'imagempadraousuario.jpg') ?>" alt="" width="32" height="32" class="rounded-circle me-1">
+                        <span class="d-none d-md-inline-block"><strong><?php echo strtok(($_SESSION['login']['userfullname']), " ")?></strong></span>
                     </a>
                     <ul class="dropdown-menu text-small shadow">
                         <li><a class="dropdown-item" href="perfil.php">Editar perfil</a></li>
@@ -82,38 +81,8 @@ if(!$_SESSION['login']){
                 </div>
             </div>
         </div>
-        <div class="container my-4">
-            <form action="src/cadastronoticia.php" method="post" enctype="multipart/form-data">
-                <?php if(isset($_GET['sucessaddnoticia'])) { ?>
-                            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                Notícia adicionada com sucesso!
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                            </div>
-                    <?php } ?>
-                <?php if(isset($_GET['erroarquivoinvalido'])) { ?>
-                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                Tamanho ou formato de arquivo inválido!
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                            </div>
-                    <?php } ?>
-                <div class="mb-3">
-                    <label for="nottitulo" class="form-label">Título</label>
-                    <input type="text" class="form-control" name="nottitulo" aria-describedby="nottituloHelp" required maxlength="50">
-                    <div id="nottituloHelp" class="form-text">Máximo 50 caracteres.</div>
-                </div>
-                <div class="mb-3">
-                    <label for="notsubtitulo" class="form-label">Sub-Título</label>
-                    <input type="text" class="form-control" name="notsubtitulo" aria-describedby="notsubtituloHelp" required maxlength="150">
-                    <div id="notsubtituloHelp" class="form-text">Máximo 150 caracteres.</div>
-                </div>
-                <div class="mb-3">
-                    <label for="notimagem" class="form-label">Imagem Principal</label>
-                    <input type="file" accept=".webp, .jpg, .png, .WEBP, .JPG, .PNG" class="form-control" id="notimagem" name="notimagem" aria-describedby="notimagemHelp" required>
-                    <div id="notimagemHelp" class="form-text">É possível arrastar o arquivo para a tela. Imagem recomendada 4:3 (1536x1024 pixels).</div>
-                </div>
-                <textarea id="mytextarea" name="nottexto" required maxlength="150" placeholder="Preencha aqui o texto da notícia."></textarea>
-                <button type="submit" class="btn btn-dark mt-3">Enviar Notícia</button>
-            </form>
+        <div class="text-center my-3">
+            <p>Aqui vai um form pra editar a foto do perfil.</p>
         </div>
     </body>
     <div class="container">
@@ -134,8 +103,3 @@ if(!$_SESSION['login']){
         </footer>
     </div>      
 </html>
-<script>
-    tinymce.init({
-         selector: 'textarea#default-editor'
-    });
-  </script>
