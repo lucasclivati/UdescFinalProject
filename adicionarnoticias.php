@@ -29,7 +29,6 @@ if(!$_SESSION['login']){
         <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.0/lottie.min.js"></script>
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-        <script src="https://cdn.tiny.cloud/1/4d2tncl2gavw0emj7m1i2635q5f6vg5no8uhsv9ob4d6q6h3/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     </head>
     <nav class="navbar navbar-expand-sm navbar-dark" id="menuprincipal">
         <div class="container-fluid">
@@ -83,18 +82,30 @@ if(!$_SESSION['login']){
             </div>
         </div>
         <div class="container my-4">
-            <form action="src/cadastronoticia.php" method="post" enctype="multipart/form-data">
+            <form action="cadastronoticia.php" method="post" enctype="multipart/form-data">
                 <?php if(isset($_GET['sucessaddnoticia'])) { ?>
                             <div class="alert alert-success alert-dismissible fade show" role="alert">
                                 Notícia adicionada com sucesso!
                                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                             </div>
                     <?php } ?>
-                <?php if(isset($_GET['erroarquivoinvalido'])) { ?>
+                <?php if(isset($_GET['formatoinvalido'])) { ?>
                             <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                Tamanho ou formato de arquivo inválido!
+                                Formato de arquivo inválido!
                                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                             </div>
+                    <?php } ?>
+                <?php if(isset($_GET['errosalvarnoticia'])) { ?>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            Erro ao salvar notícia!
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    <?php } ?>
+                <?php if(isset($_GET['erroarquivoinvalido'])) { ?>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            Imagem de formato ou tamanho inválidos!
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
                     <?php } ?>
                 <div class="mb-3">
                     <label for="nottitulo" class="form-label">Título</label>
@@ -109,9 +120,13 @@ if(!$_SESSION['login']){
                 <div class="mb-3">
                     <label for="notimagem" class="form-label">Imagem Principal</label>
                     <input type="file" accept=".webp, .jpg, .png, .WEBP, .JPG, .PNG" class="form-control" id="notimagem" name="notimagem" aria-describedby="notimagemHelp" required>
-                    <div id="notimagemHelp" class="form-text">É possível arrastar o arquivo para a tela. Imagem recomendada 4:3 (1536x1024 pixels).</div>
+                    <div id="notimagemHelp" class="form-text">É possível arrastar o arquivo para a tela. Imagem recomendada 4:3 (1536x1024 pixels). Máximo 50mb.</div>
                 </div>
-                <textarea id="mytextarea" name="nottexto" required maxlength="150" placeholder="Preencha aqui o texto da notícia."></textarea>
+                <div class="mb-3">
+                    <label for="notexto" class="form-label">Notícia</label>
+                    <textarea type="text" name="notexto" aria-describedby="notextoHelp" required maxlength="6000" class="form-control" id="idnottexto" rows="10"></textarea>
+                    <div id="notextoHelp" class="form-text">Máximo 6.000 caracteres.</div>
+                </div>
                 <button type="submit" class="btn btn-dark mt-3">Enviar Notícia</button>
             </form>
         </div>
@@ -134,8 +149,3 @@ if(!$_SESSION['login']){
         </footer>
     </div>      
 </html>
-<script>
-    tinymce.init({
-         selector: 'textarea#default-editor'
-    });
-  </script>
