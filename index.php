@@ -111,7 +111,7 @@
         <div id="noticiashome" class="row mb-2">
         </div>
       </div>
-      <div class="d-flex align-items-center justify-content-center my-2">
+      <div class="d-flex align-items-center justify-content-center mt-1 mb-2">
         <a href="noticias.php" class="btn btn-dark">Arquivo de Notícias</a>
        </div>
       

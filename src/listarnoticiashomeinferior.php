@@ -40,7 +40,7 @@ foreach ($noticias as $noticia) {
                         <a href="http://lucascliprojetofinaludesc.infinityfreeapp.com/noticia.php?idnoticia='. $noticia['idnoticia'] . '" class="stretched-link">Ver notícia.</a>
                     </div>
                     <div class="col-auto d-none d-lg-block">
-                    <img class="bd-placeholder-img" width="200" height="250" src="/files/notimgs/'.$noticia['notimagem'].'" alt="Imagem">
+                    <img class="bd-placeholder-img img-fluid" style="height:250px; width: 200px; object-fit:cover" src="/files/notimgs/'.$noticia['notimagem'].'" alt="Imagem">
                     </div>
                 </div>
             </div>
