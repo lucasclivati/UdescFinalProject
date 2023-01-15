@@ -107,72 +107,11 @@
               </div>
           </div>
         </div>
-        <div class="container px-2" id="custom-cards">
-          <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-            <div class="col">
-              <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('files/imgs/csgo-image.jpeg');">
-                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                  <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Short title, long jacket</h3>
-                  <ul class="d-flex list-unstyled mt-auto">
-                    <li class="me-auto">
-                      <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
-                    </li>
-                    <li class="d-flex align-items-center me-3">
-                      <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
-                      <small>Earth</small>
-                    </li>
-                    <li class="d-flex align-items-center">
-                      <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
-                      <small>3d</small>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-      
-            <div class="col">
-              <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('files/imgs/novotorneioesl.webp');">
-                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                  <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Much longer title that wraps to multiple lines</h3>
-                  <ul class="d-flex list-unstyled mt-auto">
-                    <li class="me-auto">
-                      <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
-                    </li>
-                    <li class="d-flex align-items-center me-3">
-                      <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
-                      <small>Pakistan</small>
-                    </li>
-                    <li class="d-flex align-items-center">
-                      <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
-                      <small>4d</small>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-      
-            <div class="col">
-              <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('files/imgs/outsiderscampea.jpg');">
-                <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                  <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Another longer title belongs here</h3>
-                  <ul class="d-flex list-unstyled mt-auto">
-                    <li class="me-auto">
-                      <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
-                    </li>
-                    <li class="d-flex align-items-center me-3">
-                      <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
-                      <small>California</small>
-                    </li>
-                    <li class="d-flex align-items-center">
-                      <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
-                      <small>5d</small>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div class="container d-flex align-items-center justify-content-center my-1 px-2">
+        <div id="noticiashome" class="row mb-2">
         </div>
+      </div>
+      
     </body>
         <div class="container">
           <footer class="d-flex flex-wrap justify-content-between align-items-center py-1 my-1 border-top">
@@ -201,5 +140,12 @@
     autoplay: true,
     name: 'demo animation'
   });
+</script>
+<script>
+    $.get('src/listarnoticiashomeinferior.php')
+        .done(function(html) {
+            $('#noticiashome').append(html);
+            console.log(html);
+        });
 </script>
 

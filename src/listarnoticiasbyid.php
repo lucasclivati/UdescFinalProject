@@ -54,14 +54,14 @@ try {
                     </div>
                     <hr>
                 </div>
-                <div class="d-flex">
-                    <a href="noticias.php" class="btn btn-dark my-2">Todas notícias</a>
-                    <<a href="index.php" class="btn btn-outline-dark my-2">Home</a>
+                <div class="d-flex justify-content-center align-items-center">
+                    <a href="noticias.php" class="btn btn-dark m-2">Notícias</a>
+                    <a href="index.php" class="btn btn-outline-dark m-2">Home</a>
+                    <p style="font-size: 0.85rem" class="m-2">
+                    Imagens geradas artificialmente no Midjourney. <br>Notícia fictícia para conclusão do curso programador Fullstack UDESC-BC.
+                    </p>
                 </div>
                 <div>
-                    <p style="font-size: 0.85rem">
-                        Imagens geradas artificialmente no Midjourney. <br>Notícia fictícia para conclusão do curso programador Fullstack UDESC-BC.
-                    </p>
                 </div>
                 ';
 }  catch (Exception $e) {
