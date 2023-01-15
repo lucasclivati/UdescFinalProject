@@ -85,7 +85,7 @@
             <div class="carousel-item">
                 <a href="http://lucascliprojetofinaludesc.infinityfreeapp.com/noticia.php?idnoticia=<?php echo $noticias[2]['idnoticia'] ?>"><img style="max-height:35rem; max-width:fit-content; margin-left: auto; margin-right: auto;" src="/files/notimgs/<?php echo $noticias[2]['notimagem'] ?>" class="d-block w-100" alt="img3"></a>
                 <div class="carousel-caption">
-                <a href="http://lucascliprojetofinaludesc.infinityfreeapp.com/noticia.php?idnoticia=<?php echo $noticias[2]['idnoticia'] ?>" class="text-decoration-none"><h5><mark><?php echo $noticias[2]['notsubtitulo'] ?></mark></h5></a>
+                <a href="http://lucascliprojetofinaludesc.infinityfreeapp.com/noticia.php?idnoticia=<?php echo $noticias[2]['idnoticia'] ?>" class="text-decoration-none"><h5><mark><?php echo $noticias[2]['nottitulo'] ?></mark></h5></a>
                 <a href="http://lucascliprojetofinaludesc.infinityfreeapp.com/noticia.php?idnoticia=<?php echo $noticias[2]['idnoticia'] ?>" class="text-decoration-none"><p><mark><?php echo $noticias[2]['notsubtitulo'] ?></mark></p></a>
                 </div>
             </div>
@@ -111,6 +111,9 @@
         <div id="noticiashome" class="row mb-2">
         </div>
       </div>
+      <div class="d-flex align-items-center justify-content-center my-2">
+        <a href="noticias.php" class="btn btn-dark">Arquivo de Notícias</a>
+       </div>
       
     </body>
         <div class="container">
