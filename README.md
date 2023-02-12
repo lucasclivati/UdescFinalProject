@@ -2,9 +2,6 @@
 
 php working version with teste DB:
 http://lucascliprojetofinaludesc.infinityfreeapp.com/
-
-non-working php version (no database connected):
-https://lucasclivati.github.io/UdescFinalProject/
  
 Desafio Full Stack Udesc 2022
 
